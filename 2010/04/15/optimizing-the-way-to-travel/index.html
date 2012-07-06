@@ -110,34 +110,31 @@
 
 <p>Happy procrastination!</p>
 
-<p><span style="font-size:x-small;">time=fltarr(w,1000) </span>
-<span style="font-size:x-small;">w=n_elements(mode) </span>
-<span style="font-size:x-small;">
-</span>
-<span style="font-size:x-small;">for i=0,w-1 do time[i,<em>]=prepa_min[i]/60.+(depart_km[i]/depart_sp[i]</em>2)+((km-depart_km[i]&gt;0)/(cruise_sp[i]<em>(km LT cruise_max[i]))) </span>
-<span style="font-size:x-small;">
-</span>
-<span style="font-size:x-small;">c=[50,70,100,140,155,175,190] </span>
-<span style="font-size:x-small;">l=[0,0,0,0,0,1,0] </span>
-<span style="font-size:x-small;">
-</span>
-<span style="font-size:x-small;">set_plot,&lsquo;ps&rsquo; </span>
-<span style="font-size:x-small;">DEVICE, filename=&lsquo;di.ps&rsquo;,SET_FONT=&lsquo;Helvetica Bold Italic&rsquo;, /TT_FONT,/color,/encap </span>
-<span style="font-size:x-small;">plot,time[0,</em>]/km<em>60,xtitle=&lsquo;Travel Distance [Km]&rsquo;,ytitle=&lsquo;Time per Kilometer [Minutes]&rsquo;,xrange=[1,200],yrange=[0.1,100],/xlog,/ylog,/ys </span>
-<span style="font-size:x-small;">for i=0,w-1 do oplot,(time[i,</em>])/km<em>60,color=c[i],thick=5,line=l[i</span>
-<span style="font-size:x-small;">legend,mode,color=c,linestyle=l,/right </span>
-<span style="font-size:x-small;">device,/close </span>
-<span style="font-size:x-small;">
-</span>
-<span style="font-size:x-small;">set_plot,&lsquo;ps&rsquo; </span>
-<span style="font-size:x-small;">DEVICE, filename=&lsquo;di2.ps&rsquo;,SET_FONT=&lsquo;Helvetica Bold Italic&rsquo;, /TT_FONT,/color,/encap </span>
-<span style="font-size:x-small;">plot,time[0,</em>],xtitle=&lsquo;Travel Distance [Km]&rsquo;,ytitle=&lsquo;Time [Hours]&rsquo;,/xlog,xrange=[1,200];,yrange=[0,50] </span>
-<span style="font-size:x-small;">for i=0,w-1 do oplot,(time[i,*]),color=c[i],thick=5,line=l[i] </span>
-<span style="font-size:x-small;">legend,mode,color=c,linestyle=l,/right,/bottom </span>
-<span style="font-size:x-small;">
-</span>
-<span style="font-size:x-small;">device,/close </span>
-<span style="font-size:x-small;">end</span></p>
+<pre><code>time=fltarr(w,1000) 
+w=n_elements(mode) 
+
+for i=0,w-1 do time[i,*]=prepa_min[i]/60.+(depart_km[i]/depart_sp[i]*2)+((km-depart_km[i]&gt;0)/(cruise_sp[i]*(km LT cruise_max[i]))) 
+
+c=[50,70,100,140,155,175,190] 
+l=[0,0,0,0,0,1,0] 
+
+
+set_plot,'ps' 
+DEVICE, filename='di.ps',SET_FONT='Helvetica Bold Italic', /TT_FONT,/color,/encap 
+plot,time[0,*]/km*60,xtitle='Travel Distance [Km]',ytitle='Time per Kilometer [Minutes]',xrange=[1,200],yrange=[0.1,100],/xlog,/ylog,/ys 
+for i=0,w-1 do oplot,(time[i,*])/km*60,color=c[i],thick=5,line=l[i
+legend,mode,color=c,linestyle=l,/right 
+device,/close 
+
+set_plot,'ps' 
+DEVICE, filename='di2.ps',SET_FONT='Helvetica Bold Italic', /TT_FONT,/color,/encap 
+plot,time[0,*],xtitle='Travel Distance [Km]',ytitle='Time [Hours]',/xlog,xrange=[1,200];,yrange=[0,50] 
+for i=0,w-1 do oplot,(time[i,*]),color=c[i],thick=5,line=l[i] 
+legend,mode,color=c,linestyle=l,/right,/bottom 
+</code></pre>
+
+<p>device,/close
+end</p>
 
   </div>
 
