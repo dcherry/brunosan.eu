@@ -2,24 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title type="text" xml:lang="en">Brunosan</title>
-	<link type="application/atom+xml" href="/brunosan.eu/feed/" rel="self"/>
- 	<link type="text" href="/brunosan.eu" rel="alternate"/>
-	<updated>2012-07-09T09:41:36-04:00</updated>
-	<id>/brunosan.eu</id>
+	<link type="application/atom+xml" href="http://brunosan.eu/feed/" rel="self"/>
+ 	<link type="text" href="http://brunosan.eu/" rel="alternate"/>
+	<updated>2012-07-16T17:52:58-04:00</updated>
+	<id>http://brunosan.eu/</id>
 	<author>
-		<name>Jason Heppler</name>
+    <name> Bruno Sánchez-Andrade Nuño </name>
 	</author>
-	<rights>Copyright (c) 2005-2012, Jason Heppler; all rights reserved.</rights>
+	<rights>Copyright (c) 2004-2012, Bruno Sánchez-Andrade Nuño ; some rights reserved.</rights>
 
 	
 	<entry>
 		<title>Migration in progress</title>
-		<link href="/brunosan.eu/2013/07/06/migration-in-progress/"/>
-		<updated>2013-07-06T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2013/07/06/migration-in-progress</id>
-		<content type="html">&lt;p&gt;I´m in the progress of moving my blog into Jekyll. I´m halfway done, so I´ve decided to publish the staging version.&lt;/p&gt;
+		<link href="http://brunosan.eu//2012/07/14/migration-in-progress/"/>
+		<updated>2012-07-14T00:00:00-04:00</updated>
+		<id>http://brunosan.eu//2012/07/14/migration-in-progress</id>
+		<content type="html">&lt;p&gt;I´m in the progress of moving my blog into Jekyll. I´m halfway done, so I´ve decided to publish the new version.&lt;/p&gt;
 
-&lt;p&gt;My old site still lives at &lt;a href=&quot;http://www.brunosan.eu&quot;&gt;brunosan.eu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sorry if things are broken. I´ve tried to respect the URL to the posts,
+so most inbound links should still work.&lt;/p&gt;
+
+&lt;p&gt;My old site still lives at &lt;a href=&quot;http://nasonurb.wordpress.com&quot;&gt;Wordpress&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Feel free to send me your comments to &lt;a href=&quot;mailto:brunosan@gmail.com?subject=Feedback%20for%20your%20newsite&quot;&gt;brunosan@gmail.com&lt;/a&gt;. Thanks!&lt;/p&gt;
 </content>
@@ -27,10 +30,10 @@
 	
 	<entry>
 		<title>Contraportada de El Comercio</title>
-		<link href="/brunosan.eu/2012/07/07/contraportada-de-el-comercio/"/>
+		<link href="http://brunosan.eu//2012/07/07/contraportada-de-el-comercio/"/>
 		<updated>2012-07-07T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/07/07/contraportada-de-el-comercio</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; title=&quot;Screen Shot 2012-07-07 at 10.44.04&quot; src=&quot;/brunosan.eu/media/contraportadaelcomercio.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;212&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+		<id>http://brunosan.eu//2012/07/07/contraportada-de-el-comercio</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; title=&quot;Screen Shot 2012-07-07 at 10.44.04&quot; src=&quot;http://brunosan.eu/media/contraportadaelcomercio.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;212&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Hoy Salgo en la &lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;contraportada del Periódico asturiano El Comercio&lt;/a&gt;. Hace unos días una periodísta, Marifé Antuña, me contacto al ver una reposición de &amp;ldquo;Asturianos en el Mundo&amp;rdquo; donde salgo y me preguntó si podía entrevistarme.&lt;/p&gt;
 
@@ -100,15 +103,15 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 
 &lt;p&gt;¿Qué desterrar? Somos una región que ha sufrido mucho laboralmente. Nos hace fuertes y más unidos, pero a veces parece que a uno le entra un nubarrón encima de la cabeza. A veces nos faltan ganas de empezar proyectos, ilusión y perseverancia profesional. Creo que debemos amar nuestra tierra, pero ampliar esos regionalismos y ser un poco más orgullosos de ser españoles, fuera de ideologías o partidos. En fútbol lo podemos hacer, ¿por qué no en otros ámbitos?&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/brunosan.eu/media/contraportadaelcomercio2.jpg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; src=&quot;/brunosan.eu/media/contraportadaelcomercio2.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brunosan.eu/media/contraportadaelcomercio2.jpg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; src=&quot;http://brunosan.eu/media/contraportadaelcomercio2.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Higgs Bosson cartoon</title>
-		<link href="/brunosan.eu/2012/07/04/Higgs-Bosson-cartoon/"/>
+		<link href="http://brunosan.eu//2012/07/04/Higgs-Bosson-cartoon/"/>
 		<updated>2012-07-04T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/07/04/Higgs-Bosson-cartoon</id>
+		<id>http://brunosan.eu//2012/07/04/Higgs-Bosson-cartoon</id>
 		<content type="html">&lt;p&gt;In case you want to know what´s the &lt;a href=&quot;http://www.nytimes.com/2012/07/05/science/cern-physicists-may-have-discovered-higgs-boson-particle.html?pagewanted=all&quot;&gt;fuss about the Higgs bosson&lt;/a&gt; and the CERN news.&lt;/p&gt;
 
 &lt;iframe src=&quot;http://player.vimeo.com/video/41038445?portrait=0&amp;amp;color=c8b3df&quot; width=&quot;500&quot; height=&quot;656&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
@@ -122,9 +125,9 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 	
 	<entry>
 		<title>Jekyll and Pull Requests</title>
-		<link href="/brunosan.eu/2012/07/01/jekyll-pull-requests/"/>
+		<link href="http://brunosan.eu//2012/07/01/jekyll-pull-requests/"/>
 		<updated>2012-07-01T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/07/01/jekyll-pull-requests</id>
+		<id>http://brunosan.eu//2012/07/01/jekyll-pull-requests</id>
 		<content type="html">&lt;p&gt;When I migrated this site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; I wanted to focus on the content. Any page on this blog is less than 2 clicks away. I´ve been blogging since 2004, so this means I have over 200 pages. While testing the new site I was flabbergasted with the many typos and edits I wanted to correct or complement on &lt;strong&gt;many&lt;/strong&gt; of the posts.&lt;/p&gt;
 
 &lt;p&gt;Fortunately this new system allows to send those edits very easily. I got the idea from &lt;a href=&quot;https://github.com/dfm/dfm.github.com/blob/master/assets/comments.js&quot;&gt;dfm&lt;/a&gt;, that uses it as a comment system. I can review or comment on them, and add them extremely easy. That´s what the little button at the bottom of each post does. This &amp;ldquo;&amp;rdquo;&lt;em&gt;Send edit request&lt;/em&gt;&amp;ldquo;&amp;rdquo; button is basically a link to a Github &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;&lt;em&gt;Pull Request&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -205,9 +208,9 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
 	
 	<entry>
 		<title>Rio+20. Where the "side events" are the main event</title>
-		<link href="/brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
+		<link href="http://brunosan.eu//2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
 		<updated>2012-06-26T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event</id>
+		<id>http://brunosan.eu//2012/06/26/rio20-where-the-side-events-are-the-main-event</id>
 		<content type="html">&lt;p&gt;[Cross posted at &lt;a href=&quot;http://news.gain.org/post/25929948555/rio-20-were-the-side-events-are-the-main-event&quot;&gt;GAIN News&lt;/a&gt;]&lt;/p&gt;
 
 &lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;]&lt;img src=&quot;http://farm9.staticflickr.com/8011/7428189938_7af1d82e2b.jpg&quot; alt=&quot;Conference entrance&quot; width=&quot;500&quot; height=&quot;299&quot; /&gt; Entrance to the Rio+20 Conference in Rio de Janeiro, Brazil[/caption]&lt;/p&gt;
@@ -291,9 +294,9 @@ Claudio Szlafsztein, PhD (&lt;a href=&quot;http://gain.org/team/claudio-szlafszt
 	
 	<entry>
 		<title>Rio+20 stuck on traffic for a year, every day</title>
-		<link href="/brunosan.eu/2012/06/24/logistics-and-rio20/"/>
+		<link href="http://brunosan.eu//2012/06/24/logistics-and-rio20/"/>
 		<updated>2012-06-24T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/06/24/logistics-and-rio20</id>
+		<id>http://brunosan.eu//2012/06/24/logistics-and-rio20</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;http://farm5.staticflickr.com/4090/4993990030_b10fd201bb.jpg&quot; alt=&quot;rio traffic&quot; width=&quot;500&quot; height=&quot;375&quot; /&gt;&lt;/p&gt;
 
 &lt;p style=&quot;text-align: justify;&quot;&gt;Rio+20 [&lt;a href=&quot;http://brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event/&quot;&gt;my post about the conference&lt;/a&gt; here, this is a rant on the traffic] had 45.381 participants from 188 countries, which included 100 heads of state and their staff [&lt;a href=&quot;http://blogs.un.org/blog/2012/06/22/rio20-wrap-up-vital-stats/&quot;&gt;source&lt;/a&gt;]. Now, &lt;a href=&quot;http://en.wikipedia.org/wiki/Rio_de_Janeiro&quot;&gt;the city of Rio de Janerio&lt;/a&gt; has 6 million people, and 2 million cars, in 5000 km². Furthermore, there seems to be a &lt;a href=&quot;http://brazilianbubble.com/opinion-brazils-strained-auto-loan-market&quot;&gt;automobile loan bubble&lt;/a&gt;, similar to the house loan bubble in the USA, that has been injecting cars into the barely increasing roads of the city. You can already see how logistics in Rio+20 are, at least, very tricky.&lt;/p&gt;
@@ -330,9 +333,9 @@ The green wears out at the UN conference&lt;/p&gt;
 	
 	<entry>
 		<title>El Sol y sus Tormentas, en Prímula</title>
-		<link href="/brunosan.eu/2012/06/20/el-sol-y-sus-tormentas-en-primula/"/>
+		<link href="http://brunosan.eu//2012/06/20/el-sol-y-sus-tormentas-en-primula/"/>
 		<updated>2012-06-20T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/06/20/el-sol-y-sus-tormentas-en-primula</id>
+		<id>http://brunosan.eu//2012/06/20/el-sol-y-sus-tormentas-en-primula</id>
 		<content type="html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot;&gt;&lt;img class=&quot;aligncenter  wp-image-2429&quot; title=&quot;Screen Shot 2012-06-09 at 22.44.27&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;234&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
@@ -421,9 +424,9 @@ El material de este artículo lo he extraído de:
 	
 	<entry>
 		<title>It´s not about the Science, it´s the whole package</title>
-		<link href="/brunosan.eu/2012/06/02/its-not-only-about-science/"/>
+		<link href="http://brunosan.eu//2012/06/02/its-not-only-about-science/"/>
 		<updated>2012-06-02T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/06/02/its-not-only-about-science</id>
+		<id>http://brunosan.eu//2012/06/02/its-not-only-about-science</id>
 		<content type="html">&lt;p&gt;This is a screencast of my talk the &lt;a href=&quot;http://www.adaptation.arizona.edu/adaptation2012/&quot;&gt;Adaptation Futures&lt;/a&gt; conference in Arizona last month. I present our &lt;a href=&quot;http://index.gain.org&quot;&gt;GAIN Index&lt;/a&gt; to measure the vulnerability of countries to face Adaptation challenges, and their readiness to implement solutions. Beyond the Index, I tried to stress the importance of the &lt;em&gt;whole package&lt;/em&gt;: It is not about making good science, it is not just an academic exercise. From the beginning one needs to think who will be the users, what do they know and what they want to know, and how are you going to present it.&lt;/p&gt;
 
 &lt;p&gt;In particular, consider that many stakeholders in Adaptation are not engaged, or even aware. Our work won´t get much beyond a few academics if your Index needs one hour to be explained. If you get time to talk to a president or a CEO, like we have had, you want to inform them, but first you need to engage them, quickly. This is how we do it.&lt;!--more--&gt;&lt;/p&gt;
@@ -437,9 +440,9 @@ El material de este artículo lo he extraído de:
 	
 	<entry>
 		<title>Scientific value ≠ Perception of the scientific value</title>
-		<link href="/brunosan.eu/2012/05/18/scientific-value-%25e2%2589%25a0-perception-of-the-scientific-value/"/>
+		<link href="http://brunosan.eu//2012/05/18/scientific-value-%25e2%2589%25a0-perception-of-the-scientific-value/"/>
 		<updated>2012-05-18T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/05/18/scientific-value-%e2%89%a0-perception-of-the-scientific-value</id>
+		<id>http://brunosan.eu//2012/05/18/scientific-value-%e2%89%a0-perception-of-the-scientific-value</id>
 		<content type="html">&lt;p&gt;A russian satellite makes a time lapse of the Earth from space. A truly beautiful video.&lt;/p&gt;
 
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/6twFHqJ03_k &quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -473,10 +476,10 @@ El material de este artículo lo he extraído de:
 	
 	<entry>
 		<title>Case Study for an Invitation System using Google Apps Script.</title>
-		<link href="/brunosan.eu/2012/05/18/case-study-for-an-invitation-system-using-google-apps-script/"/>
+		<link href="http://brunosan.eu//2012/05/18/case-study-for-an-invitation-system-using-google-apps-script/"/>
 		<updated>2012-05-18T00:00:00-04:00</updated>
-		<id>/brunosan.eu/2012/05/18/case-study-for-an-invitation-system-using-google-apps-script</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-5-38-35-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2417&quot; title=&quot;Screen Shot 2012-05-18 at 5.38.35 PM&quot; src=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-5-38-35-pm.png&quot; width=&quot;100%&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+		<id>http://brunosan.eu//2012/05/18/case-study-for-an-invitation-system-using-google-apps-script</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-5-38-35-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2417&quot; title=&quot;Screen Shot 2012-05-18 at 5.38.35 PM&quot; src=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-5-38-35-pm.png&quot; width=&quot;100%&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Earlier this month my NGO (&lt;a href=&quot;http://gain.org&quot;&gt;GAIN&lt;/a&gt;) had its &lt;a href=&quot;http://gain.org/annual-meeting-2012&quot;&gt;annual meeting&lt;/a&gt;. Around 200 participants, which includes several presidents, CEOs, ambassadors and representatives of the World Bank, OAS, and more than 100 companies. The invitation list to the reception had more than 1.000 names.&lt;/p&gt;&lt;/p&gt;
 
@@ -536,7 +539,7 @@ ids random  random  token
 &lt;/ul&gt;
 
 
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-2-50-43-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2406&quot; title=&quot;Screen Shot 2012-05-18 at 2.50.43 PM&quot; src=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-2-50-43-pm.png&quot; alt=&quot;&quot;  width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-2-50-43-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2406&quot; title=&quot;Screen Shot 2012-05-18 at 2.50.43 PM&quot; src=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-2-50-43-pm.png&quot; alt=&quot;&quot;  width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
 
@@ -661,7 +664,7 @@ ids random  random  token
 &lt;p style=&quot;text-align:justify;&quot;&gt;We actually made two Google Forms, one for each group with its questions to the appropriate sessions. Instead of just adding the link to the email, &lt;strong&gt;I used the URL to pass along personalized pre-populated information&lt;/strong&gt; to the form. That saves time to the person (we already know his name, and also allows us to place the Token on the last field to identify the answer). [btw Non ASCII characters like accents, can break on IE]&lt;/p&gt;
 
 
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;/brunosan.eu/media/20120518-tuene3ea161sej1p3cbe8i1is3.jpeg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2424&quot; title=&quot;20120518-tuene3ea161sej1p3cbe8i1is3&quot; src=&quot;/brunosan.eu/media/20120518-tuene3ea161sej1p3cbe8i1is3.jpeg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;http://brunosan.eu/media/20120518-tuene3ea161sej1p3cbe8i1is3.jpeg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2424&quot; title=&quot;20120518-tuene3ea161sej1p3cbe8i1is3&quot; src=&quot;http://brunosan.eu/media/20120518-tuene3ea161sej1p3cbe8i1is3.jpeg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;p style=&quot;text-align:justify;&quot;&gt;This is the simple code to make a personalized URL like &lt;a href=&quot;https://docs.google.com/spreadsheet/viewform?formkey=dHFWZllkZWluU2ZEbFU0X0FZaFZJZHc6MQ&amp;amp;entry_6=Dr.&amp;amp;entry_0=Bruno&amp;amp;entry_7=S%C3%A1nchez-Andrade%20Nu%C3%B1o&amp;amp;entry_8=Global%20Adaptation%20Institute&amp;amp;entry_9=Director%20for%20Science%20and%20Technology&amp;amp;entry_5=t200w167&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
@@ -916,7 +919,7 @@ to add an extra menu, only to particular users.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Having all the information in one placed and updated in almost real time, allows to easily track the progress, with only a few Google Spreadsheet Formulas:&lt;/p&gt;
 
 
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-4-26-46-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2410&quot; title=&quot;Screen Shot 2012-05-18 at 4.26.46 PM&quot; src=&quot;/brunosan.eu/media/screen-shot-2012-05-18-at-4-26-46-pm.png&quot; alt=&quot;&quot;  width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-4-26-46-pm.png&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2410&quot; title=&quot;Screen Shot 2012-05-18 at 4.26.46 PM&quot; src=&quot;http://brunosan.eu/media/screen-shot-2012-05-18-at-4-26-46-pm.png&quot; alt=&quot;&quot;  width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;p style=&quot;text-align:justify;&quot;&gt;Count number of Confirmation for a particular Session:

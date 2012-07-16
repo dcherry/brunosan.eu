@@ -159,6 +159,8 @@ a:hover.perma {
 }
 
 
+
+
 /*
 BUTTONS
 */
@@ -200,6 +202,23 @@ BUTTONS
 
 
 
+
+.share-links {
+   overflow:hidden;
+   width:auto;
+   text-indent: 0;
+}
+
+.share-links li {
+   float: left;
+   display: inline-block;
+   vertical-align:middle;
+   padding: 7px;
+   height: 21px;
+}
+
+
+
 /*
 LINKS
 */
@@ -218,9 +237,13 @@ a:hover {
     text-decoration: none;
 }
 
+
+
+
 /*
 HEADER
 */
+
 
 h1, h2, h3, h4, h5 {
   font-weight: 700;
@@ -486,12 +509,32 @@ footer a:hover {
 
 
 
+/*
+External link icon
+ */
+a[href^="http"]:not(.btn) {
+  background: url(/media/external.gif) center right no-repeat;
+  padding-right: 13px;
+}
+
+
+a[href^="http://localhost"]:not(.btn) {
+    background: none;
+    padding-right: 0;
+}
+
+a[href^="http://brunosan.eu"]:not(.btn) {
+    background: none;
+    padding-right: 0;
+}
+
+
 @media handheld, screen and (max-width:480px), screen and (max-device-width:480px) {
 
 	body {
 		width: 90%;
 		margin: 0 auto;
-		-webkit-text-size-adjust: 230%;
+		webkit-text-size-adjust: 150%;
 	}
 	
 	header {
@@ -517,7 +560,7 @@ footer a:hover {
 	nav ul {
 		display: inline-block;
 		margin: 0;
-		font-size: 12px;
+		font-size: 100%;
 	}
 	
 	nav ul li {
@@ -549,7 +592,7 @@ footer a:hover {
 		margin: 27px 0 0;
 		padding-top: 23px;
 		clear: both;
-		-webkit-text-size-adjust: 200%;
+		-webkit-text-size-adjust: 150%;
 	}
 
 }
