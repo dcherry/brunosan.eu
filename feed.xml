@@ -4,7 +4,7 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="http://brunosan.eu/feed/" rel="self"/>
  	<link type="text" href="http://brunosan.eu/" rel="alternate"/>
-	<updated>2012-07-17T16:28:04-04:00</updated>
+	<updated>2012-07-17T16:43:21-04:00</updated>
 	<id>http://brunosan.eu/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
@@ -104,12 +104,11 @@ format, definitions and structure to release their data.&lt;/p&gt;
 &lt;li&gt;Machine readable or human readable?&lt;/li&gt;
 &lt;li&gt;Do I source where I took it from, or where it actually originates?&lt;/li&gt;
 &lt;li&gt;Where to place the definitions of the terms I use? Which language?&lt;/li&gt;
-&lt;li&gt;Which alphabet? (Luckily the whole world uses Arabic numbers and
+&lt;li&gt;Is it Russian or Chinese? (Luckily the whole world uses Arabic numbers and
 decimal systems.)&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;When Gain developed our Index I was keen to use python, R o any
 reasonable tool. The fact is that most Economist and development
@@ -117,18 +116,16 @@ partitioners use Excel, some VBA. I had to learn it from scracth. Being
 a 2D framework is painfully cumbersome to deal with, not to mention
 the VBA inconsistencies and the fact that probably 70% of the code is
 overhead dealing with files, errors, declarations and not the actual
-conceptual operations. I´m positive our code would be 10 times faster
-shorter and clearer in Ruby or Python with a proper database.&lt;/p&gt;
+conceptual operations. I´m positive our code would be 10 times faster,
+shorter and clearer in i.e. Ruby or Python with a proper database.&lt;/p&gt;
 
-&lt;p&gt;We desperately need a format to which we can all adhere or, if we can´t
-agree on one, a standard way to specify the format so we can convert them. And we need to stop
-using Excel, please.&lt;/p&gt;
+&lt;p&gt;We need to use open clear formats, or at least a standard way to specify the format so we can convert them. And we need to stop using Excel, please.&lt;/p&gt;
 
 &lt;h3&gt;The challenge of non publicly funded open data&lt;/h3&gt;
 
 &lt;p&gt;Overhead at IOGDC:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;&amp;ldquo;Open Data is a public good, for the public good&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;&amp;ldquo;Data is a public good, for the public good&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;Yes, data should be a public good, so that anyone can leverage on it. The
 challenge is that data gathering is usually an expensive endeavor. On
