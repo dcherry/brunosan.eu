@@ -4,13 +4,96 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="http://brunosan.eu/feed/" rel="self"/>
  	<link type="text" href="http://brunosan.eu/" rel="alternate"/>
-	<updated>2012-07-17T16:43:21-04:00</updated>
+	<updated>2012-07-18T10:37:12-04:00</updated>
 	<id>http://brunosan.eu/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
 	</author>
 	<rights>Copyright (c) 2004-2012, Bruno Sánchez-Andrade Nuño ; some rights reserved.</rights>
 
+	
+	<entry>
+		<title>Jekyll and Pull Requests</title>
+		<link href="http://brunosan.eu//2012/09/01/jekyll-pull-requests/"/>
+		<updated>2012-09-01T00:00:00-04:00</updated>
+		<id>http://brunosan.eu//2012/09/01/jekyll-pull-requests</id>
+		<content type="html">&lt;p&gt;&lt;strong&gt;I´m migrating my blog to this new system. Sorry for the many bugs. I´ll
+appreciate any &lt;a href=&quot;email:brunosan@gmail.com&quot;&gt;comments or suggestions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When I migrated this site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; I wanted to focus on the content. Any page on this blog is less than 2 clicks away. I´ve been blogging since 2004, so this means I have over 200 pages. While testing the new site I was flabbergasted with the many typos and edits I wanted to correct or complement on &lt;strong&gt;many&lt;/strong&gt; of the posts.&lt;/p&gt;
+
+&lt;p&gt;Fortunately this new system allows to send those edits very easily. I got the idea from &lt;a href=&quot;https://github.com/dfm/dfm.github.com/blob/master/assets/comments.js&quot;&gt;dfm&lt;/a&gt;, that uses it as a comment system. I can review or comment on them, and add them extremely easy. That´s what the little button at the bottom of each post does. This &amp;ldquo;&amp;rdquo;&lt;em&gt;Send edit request&lt;/em&gt;&amp;ldquo;&amp;rdquo; button is basically a link to a Github &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;&lt;em&gt;Pull Request&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And this is how it works:&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The site is made of flat text files&lt;/strong&gt;
+This site is made in &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, so everything is a flat text file. What Jekyll does is convert those files into html format ready for your browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The site is a git repository on Github&lt;/strong&gt;
+The website is actually a &lt;a href=&quot;http://en.wikipedia.org/wiki/Git_(software&quot;&gt;git&lt;/a&gt; repository. And &lt;a href=&quot;www.github.com&quot;&gt;Github&lt;/a&gt; is the website where that repository lives, and from where this site is hosted. Among other many things git allows for &lt;em&gt;asynchronous collaboration&lt;/em&gt;. One can just clone the repository. Git keeps track of the history of changes, and any modification on any clone or the main site can be easily integrated among clones, or the main repository. That means, for example, that I can write my posts offline, and then send my changes once I&amp;rsquo;m online.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Pull request is only a link to a URL&lt;/strong&gt;
+What a &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;&lt;em&gt;Pull Request&lt;/em&gt;&lt;/a&gt; does is make a clone of the repository of my website. When you make edits you can send them back to the main repository. Since you don´t have permission to change the website (only me), I receive a notification that someone is proposing changes. I can review them, modify them and integrate them.&lt;/p&gt;
+
+&lt;p&gt;This functionality is &lt;strong&gt;huge&lt;/strong&gt; when developing software, specially open-source software. Anyone can propose edits than are integrated, and all those changes are authored in the history of the repository.&lt;/p&gt;
+
+&lt;p&gt;In my case all I need to do is create that link.&lt;/p&gt;
+
+&lt;p&gt;For example, this post that lives here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/2012/09/01/jekyll-pull-requests/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and its filename is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2012-07-01-jekyll-pull-requests.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;therefore the link should be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://github.com/brunosan/brunosan.eu/edit/master/_posts/2012-07-01-jekyll-pull-requests.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or if I use &lt;a href=&quot;http://developmentseed.org/blog/2012/june/25/prose-a-content-editor-for-github/&quot;&gt;prose&lt;/a&gt; [at the moment prose does not allow pull request via url link]:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://prose.io/#brunosan/brunosan.eu/master/_posts/2012-07-01-jekyll-pull-requests.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Getting the filename is tricky. &lt;a href=&quot;http://www.twitter/dfm&quot;&gt;Dan Foreman&lt;/a&gt; constructed the filename using the date and title, but filenames can be different from titles. What I did is to create the variable &lt;code&gt;filename&lt;/code&gt; on the YAML:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+filename: 2012-07-01-jekyll-pull-requests.md
+layout: post
+title: Jekyll and Pull Requests
+tags:
+- github
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I would hate to need to add this manually, so I made a simple shell script that checks if the filename variable is present, and it adds it if not:&lt;/p&gt;
+
+&lt;div&gt;&lt;script src='https://gist.github.com/3058846.js?file='&gt;&lt;/script&gt;
+&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;#!/bin/bash
+cd _posts
+for file in $(ls *.md)
+do
+    if grep -Fq &amp;quot;filename: &amp;quot; $file
+    then
+       # code if not found
+       echo &amp;quot;File: $file already processed&amp;quot;
+    else
+        # code if found
+        echo &amp;quot;Adding the line on file: $file&amp;quot;
+        awk -v n=2 -v s=&amp;quot;filename: $file&amp;quot; 'NR == n {print s} {print}' $file &amp;gt; tmp.txt
+        mv tmp.txt $file
+    fi
+
+done&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can see a &lt;a href=&quot;https://github.com/brunosan/brunosan.eu/pulls&quot;&gt;list of all my Pull Request&lt;/a&gt;. Feel free to comment or test it. Just click below!&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Next Steps in Open Data</title>
@@ -289,89 +372,6 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 &lt;p&gt; &lt;p&gt;&lt;a href=&quot;http://vimeo.com/41038445&quot;&gt;The Higgs Boson Explained&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/phdcomics&quot;&gt;PHD Comics&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;And please, stop saying is the God´s particle, that´s prepostreous.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Jekyll and Pull Requests</title>
-		<link href="http://brunosan.eu//2012/07/01/jekyll-pull-requests/"/>
-		<updated>2012-07-01T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/07/01/jekyll-pull-requests</id>
-		<content type="html">&lt;p&gt;When I migrated this site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; I wanted to focus on the content. Any page on this blog is less than 2 clicks away. I´ve been blogging since 2004, so this means I have over 200 pages. While testing the new site I was flabbergasted with the many typos and edits I wanted to correct or complement on &lt;strong&gt;many&lt;/strong&gt; of the posts.&lt;/p&gt;
-
-&lt;p&gt;Fortunately this new system allows to send those edits very easily. I got the idea from &lt;a href=&quot;https://github.com/dfm/dfm.github.com/blob/master/assets/comments.js&quot;&gt;dfm&lt;/a&gt;, that uses it as a comment system. I can review or comment on them, and add them extremely easy. That´s what the little button at the bottom of each post does. This &amp;ldquo;&amp;rdquo;&lt;em&gt;Send edit request&lt;/em&gt;&amp;ldquo;&amp;rdquo; button is basically a link to a Github &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;&lt;em&gt;Pull Request&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;And this is how it works:&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The site is made of flat text files&lt;/strong&gt;
-This site is made in &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, so everything is a flat text file. What Jekyll does is convert those files into html format ready for your browser.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The site is a git repository on Github&lt;/strong&gt;
-The website is actually a &lt;a href=&quot;http://en.wikipedia.org/wiki/Git_(software&quot;&gt;git&lt;/a&gt; repository. And &lt;a href=&quot;www.github.com&quot;&gt;Github&lt;/a&gt; is the website where that repository lives, and from where this site is hosted. Among other many things git allows for &lt;em&gt;asynchronous collaboration&lt;/em&gt;. One can just clone the repository. Git keeps track of the history of changes, and any modification on any clone or the main site can be easily integrated among clones, or the main repository. That means, for example, that I can write my posts offline, and then send my changes once I&amp;rsquo;m online.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A Pull request is only a link to a URL&lt;/strong&gt;
-What a &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;&lt;em&gt;Pull Request&lt;/em&gt;&lt;/a&gt; does is make a clone of the repository of my website. When you make edits you can send them back to the main repository. Since you don´t have permission to change the website (only me), I receive a notification that someone is proposing changes. I can review them, modify them and integrate them.&lt;/p&gt;
-
-&lt;p&gt;This functionality is &lt;strong&gt;huge&lt;/strong&gt; when developing software, specially open-source software. Anyone can propose edits than are integrated, and all those changes are authored in the history of the repository.&lt;/p&gt;
-
-&lt;p&gt;In my case all I need to do is create that link.&lt;/p&gt;
-
-&lt;p&gt;For example, this post that lives here:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/2012/07/01/jekyll-pull-requests/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and its filename is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;2012-07-01-jekyll-pull-requests.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;therefore the link should be:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://github.com/brunosan/brunosan.eu/edit/master/_posts/2012-07-01-jekyll-pull-requests.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or if I use &lt;a href=&quot;http://developmentseed.org/blog/2012/june/25/prose-a-content-editor-for-github/&quot;&gt;prose&lt;/a&gt; [at the moment prose does not allow pull request via url link]:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://prose.io/#brunosan/brunosan.eu/master/_posts/2012-07-01-jekyll-pull-requests.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Getting the filename is tricky. &lt;a href=&quot;http://www.twitter/dfm&quot;&gt;Dan Foreman&lt;/a&gt; constructed the filename using the date and title, but filenames can be different from titles. What I did is to create the variable &lt;code&gt;filename&lt;/code&gt; on the YAML:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;---
-filename: 2012-07-01-jekyll-pull-requests.md
-layout: post
-title: Jekyll and Pull Requests
-tags:
-- github
----
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I would hate to need to add this manually, so I made a simple shell script that checks if the filename variable is present, and it adds it if not:&lt;/p&gt;
-
-&lt;div&gt;&lt;script src='https://gist.github.com/3058846.js?file='&gt;&lt;/script&gt;
-&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;#!/bin/bash
-cd _posts
-for file in $(ls *.md)
-do
-    if grep -Fq &amp;quot;filename: &amp;quot; $file
-    then
-       # code if not found
-       echo &amp;quot;File: $file already processed&amp;quot;
-    else
-        # code if found
-        echo &amp;quot;Adding the line on file: $file&amp;quot;
-        awk -v n=2 -v s=&amp;quot;filename: $file&amp;quot; 'NR == n {print s} {print}' $file &amp;gt; tmp.txt
-        mv tmp.txt $file
-    fi
-
-done&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
-
-
-&lt;p&gt;The last piece is the &lt;a href=&quot;https://github.com/brunosan/brunosan.eu/blob/master/js/pull-request.js&quot;&gt;little JavaScript&lt;/a&gt; that opens the URL.
- &lt;strong&gt;Update&lt;/strong&gt;: Now that I think about it, I don´t need this last .js. I could just place the link directly. One day&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;You can see a &lt;a href=&quot;https://github.com/brunosan/brunosan.eu/pulls&quot;&gt;list of all my Pull Request&lt;/a&gt;. Feel free to comment or test it. Just click below!&lt;/p&gt;
 </content>
 	</entry>
 	
