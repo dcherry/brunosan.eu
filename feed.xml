@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title type="text" xml:lang="en">Brunosan</title>
-	<link type="application/atom+xml" href="http://brunosan.eu/feed/" rel="self"/>
- 	<link type="text" href="http://brunosan.eu/" rel="alternate"/>
-	<updated>2012-07-18T10:45:41-04:00</updated>
-	<id>http://brunosan.eu/</id>
+	<link type="application/atom+xml" href="http://brunosan.eufeed/" rel="self"/>
+ 	<link type="text" href="http://brunosan.eu" rel="alternate"/>
+	<updated>2012-07-18T10:59:22-04:00</updated>
+	<id>http://brunosan.eu</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
 	</author>
@@ -14,9 +14,9 @@
 	
 	<entry>
 		<title>Jekyll and Pull Requests</title>
-		<link href="http://brunosan.eu//2012/09/01/jekyll-pull-requests/"/>
+		<link href="http://brunosan.eu/2012/09/01/jekyll-pull-requests/"/>
 		<updated>2012-09-01T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/09/01/jekyll-pull-requests</id>
+		<id>http://brunosan.eu/2012/09/01/jekyll-pull-requests</id>
 		<content type="html">&lt;p&gt;&lt;strong&gt;I´m migrating my blog to this new system. Sorry for the many bugs. I´ll
 appreciate any &lt;a href=&quot;email:brunosan@gmail.com&quot;&gt;comments or suggestions&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -97,9 +97,9 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
 	
 	<entry>
 		<title>Next Steps in Open Data</title>
-		<link href="http://brunosan.eu//2012/07/15/Next-steps-in-Open-Data/"/>
+		<link href="http://brunosan.eu/2012/07/15/Next-steps-in-Open-Data/"/>
 		<updated>2012-07-15T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/07/15/Next-steps-in-Open-Data</id>
+		<id>http://brunosan.eu/2012/07/15/Next-steps-in-Open-Data</id>
 		<content type="html">&lt;p&gt;Last week DC hosted the &lt;a href=&quot;http://www.data.gov/communities/conference&quot;&gt;Open Government Data
 Conference&lt;/a&gt;, the
 &lt;a href=&quot;http://tech.state.gov/profiles/blogs/tech-state-wiki-gov-agenda&quot;&gt;Tech@State&lt;/a&gt;, the
@@ -266,9 +266,9 @@ focus, not the prizes.&lt;/p&gt;
 	
 	<entry>
 		<title>Migration in progress</title>
-		<link href="http://brunosan.eu//2012/07/14/migration-in-progress/"/>
+		<link href="http://brunosan.eu/2012/07/14/migration-in-progress/"/>
 		<updated>2012-07-14T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/07/14/migration-in-progress</id>
+		<id>http://brunosan.eu/2012/07/14/migration-in-progress</id>
 		<content type="html">&lt;p&gt;I´m in the progress of moving my blog into Jekyll. I´m halfway done, so I´ve decided to publish the new version.&lt;/p&gt;
 
 &lt;p&gt;Sorry if things are broken. I´ve tried to respect the URL to the posts,
@@ -282,10 +282,10 @@ so most inbound links should still work.&lt;/p&gt;
 	
 	<entry>
 		<title>Contraportada de El Comercio</title>
-		<link href="http://brunosan.eu//2012/07/07/contraportada-de-el-comercio/"/>
+		<link href="http://brunosan.eu/2012/07/07/contraportada-de-el-comercio/"/>
 		<updated>2012-07-07T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/07/07/contraportada-de-el-comercio</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; title=&quot;Screen Shot 2012-07-07 at 10.44.04&quot; src=&quot;http://brunosan.eu/media/contraportadaelcomercio.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;212&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+		<id>http://brunosan.eu/2012/07/07/contraportada-de-el-comercio</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; title=&quot;Screen Shot 2012-07-07 at 10.44.04&quot; src=&quot;http://brunosan.eumedia/contraportadaelcomercio.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;212&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Hoy Salgo en la &lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;contraportada del Periódico asturiano El Comercio&lt;/a&gt;. Hace unos días una periodísta, Marifé Antuña, me contacto al ver una reposición de &amp;ldquo;Asturianos en el Mundo&amp;rdquo; donde salgo y me preguntó si podía entrevistarme.&lt;/p&gt;
 
@@ -355,15 +355,15 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 
 &lt;p&gt;¿Qué desterrar? Somos una región que ha sufrido mucho laboralmente. Nos hace fuertes y más unidos, pero a veces parece que a uno le entra un nubarrón encima de la cabeza. A veces nos faltan ganas de empezar proyectos, ilusión y perseverancia profesional. Creo que debemos amar nuestra tierra, pero ampliar esos regionalismos y ser un poco más orgullosos de ser españoles, fuera de ideologías o partidos. En fútbol lo podemos hacer, ¿por qué no en otros ámbitos?&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://brunosan.eu/media/contraportadaelcomercio2.jpg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; src=&quot;http://brunosan.eu/media/contraportadaelcomercio2.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://brunosan.eumedia/contraportadaelcomercio2.jpg&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; src=&quot;http://brunosan.eumedia/contraportadaelcomercio2.jpg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Higgs Bosson cartoon</title>
-		<link href="http://brunosan.eu//2012/07/04/Higgs-Bosson-cartoon/"/>
+		<link href="http://brunosan.eu/2012/07/04/Higgs-Bosson-cartoon/"/>
 		<updated>2012-07-04T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/07/04/Higgs-Bosson-cartoon</id>
+		<id>http://brunosan.eu/2012/07/04/Higgs-Bosson-cartoon</id>
 		<content type="html">&lt;p&gt;In case you want to know what´s the &lt;a href=&quot;http://www.nytimes.com/2012/07/05/science/cern-physicists-may-have-discovered-higgs-boson-particle.html?pagewanted=all&quot;&gt;fuss about the Higgs bosson&lt;/a&gt; and the CERN news.&lt;/p&gt;
 
 &lt;iframe src=&quot;http://player.vimeo.com/video/41038445?portrait=0&amp;amp;color=c8b3df&quot; width=&quot;500&quot; height=&quot;656&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
@@ -377,9 +377,9 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 	
 	<entry>
 		<title>Rio+20. Where the "side events" are the main event</title>
-		<link href="http://brunosan.eu//2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
+		<link href="http://brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
 		<updated>2012-06-26T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/06/26/rio20-where-the-side-events-are-the-main-event</id>
+		<id>http://brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event</id>
 		<content type="html">&lt;p&gt;[Cross posted at &lt;a href=&quot;http://news.gain.org/post/25929948555/rio-20-were-the-side-events-are-the-main-event&quot;&gt;GAIN News&lt;/a&gt;]&lt;/p&gt;
 
 &lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;]&lt;img src=&quot;http://farm9.staticflickr.com/8011/7428189938_7af1d82e2b.jpg&quot; alt=&quot;Conference entrance&quot; width=&quot;500&quot; height=&quot;299&quot; /&gt; Entrance to the Rio+20 Conference in Rio de Janeiro, Brazil[/caption]&lt;/p&gt;
@@ -452,7 +452,7 @@ Claudio Szlafsztein, PhD (&lt;a href=&quot;http://gain.org/team/claudio-szlafszt
 
 &lt;hr /&gt;
 
-&lt;p&gt;I also wrote another post about the  &lt;a href=&quot;http://brunosan.eu/2012/06/24/logistics-and-rio20/&quot;&gt;logistics of the conference and traffic&lt;/a&gt;; and here some of my &lt;a href=&quot;http://www.flickr.com/photos/nasonurb/sets/72157630255506528/with/7428189938/&quot;&gt;pictures of Rio+20 from Flickr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also wrote another post about the  &lt;a href=&quot;http://brunosan.eu2012/06/24/logistics-and-rio20/&quot;&gt;logistics of the conference and traffic&lt;/a&gt;; and here some of my &lt;a href=&quot;http://www.flickr.com/photos/nasonurb/sets/72157630255506528/with/7428189938/&quot;&gt;pictures of Rio+20 from Flickr&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;179&amp;rdquo;]&lt;a title=&quot;Credential by brunosan, on Flickr&quot; href=&quot;http://www.flickr.com/photos/nasonurb/7428190608/&quot;&gt;&lt;img src=&quot;http://farm6.staticflickr.com/5455/7428190608_2e2f3d5990.jpg&quot; alt=&quot;Credential&quot; width=&quot;179&quot; height=&quot;300&quot; /&gt;&lt;/a&gt; Credential to enter the UN conference[/caption]&lt;/p&gt;
 
@@ -463,12 +463,12 @@ Claudio Szlafsztein, PhD (&lt;a href=&quot;http://gain.org/team/claudio-szlafszt
 	
 	<entry>
 		<title>Rio+20 stuck on traffic for a year, every day</title>
-		<link href="http://brunosan.eu//2012/06/24/logistics-and-rio20/"/>
+		<link href="http://brunosan.eu/2012/06/24/logistics-and-rio20/"/>
 		<updated>2012-06-24T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/06/24/logistics-and-rio20</id>
+		<id>http://brunosan.eu/2012/06/24/logistics-and-rio20</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;http://farm5.staticflickr.com/4090/4993990030_b10fd201bb.jpg&quot; alt=&quot;rio traffic&quot; width=&quot;500&quot; height=&quot;375&quot; /&gt;&lt;/p&gt;
 
-&lt;p style=&quot;text-align: justify;&quot;&gt;Rio+20 [&lt;a href=&quot;http://brunosan.eu/2012/06/26/rio20-where-the-side-events-are-the-main-event/&quot;&gt;my post about the conference&lt;/a&gt; here, this is a rant on the traffic] had 45.381 participants from 188 countries, which included 100 heads of state and their staff [&lt;a href=&quot;http://blogs.un.org/blog/2012/06/22/rio20-wrap-up-vital-stats/&quot;&gt;source&lt;/a&gt;]. Now, &lt;a href=&quot;http://en.wikipedia.org/wiki/Rio_de_Janeiro&quot;&gt;the city of Rio de Janerio&lt;/a&gt; has 6 million people, and 2 million cars, in 5000 km². Furthermore, there seems to be a &lt;a href=&quot;http://brazilianbubble.com/opinion-brazils-strained-auto-loan-market&quot;&gt;automobile loan bubble&lt;/a&gt;, similar to the house loan bubble in the USA, that has been injecting cars into the barely increasing roads of the city. You can already see how logistics in Rio+20 are, at least, very tricky.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Rio+20 [&lt;a href=&quot;http://brunosan.eu2012/06/26/rio20-where-the-side-events-are-the-main-event/&quot;&gt;my post about the conference&lt;/a&gt; here, this is a rant on the traffic] had 45.381 participants from 188 countries, which included 100 heads of state and their staff [&lt;a href=&quot;http://blogs.un.org/blog/2012/06/22/rio20-wrap-up-vital-stats/&quot;&gt;source&lt;/a&gt;]. Now, &lt;a href=&quot;http://en.wikipedia.org/wiki/Rio_de_Janeiro&quot;&gt;the city of Rio de Janerio&lt;/a&gt; has 6 million people, and 2 million cars, in 5000 km². Furthermore, there seems to be a &lt;a href=&quot;http://brazilianbubble.com/opinion-brazils-strained-auto-loan-market&quot;&gt;automobile loan bubble&lt;/a&gt;, similar to the house loan bubble in the USA, that has been injecting cars into the barely increasing roads of the city. You can already see how logistics in Rio+20 are, at least, very tricky.&lt;/p&gt;
 
 
 &lt;p style=&quot;text-align: justify;&quot;&gt;&lt;!--more--&gt;&lt;/p&gt;
@@ -502,9 +502,9 @@ The green wears out at the UN conference&lt;/p&gt;
 	
 	<entry>
 		<title>El Sol y sus Tormentas, en Prímula</title>
-		<link href="http://brunosan.eu//2012/06/20/el-sol-y-sus-tormentas-en-primula/"/>
+		<link href="http://brunosan.eu/2012/06/20/el-sol-y-sus-tormentas-en-primula/"/>
 		<updated>2012-06-20T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/06/20/el-sol-y-sus-tormentas-en-primula</id>
+		<id>http://brunosan.eu/2012/06/20/el-sol-y-sus-tormentas-en-primula</id>
 		<content type="html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot;&gt;&lt;img class=&quot;aligncenter  wp-image-2429&quot; title=&quot;Screen Shot 2012-06-09 at 22.44.27&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;234&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
@@ -572,7 +572,7 @@ Las sospechas se confirmaron el 21 de octubre. Algo, aún detrás del borde visi
 &lt;p style=&quot;text-align: justify;&quot;&gt;Lentamente, ambas manchas seguían su explosiva marcha por la superficie del Sol, hacia el borde oeste. En un último acto de protagonismo, la segunda mancha, ya en el borde visible desde Tierra, emitió una llamarada tan grande que cegó las cámaras, haciendo imposible medir su intensidad exacta. Lo que sí es seguro es que era más del doble de potente que la que impactó la Tierra un par de semanas antes. Mientras los científicos seguían la tra- yectoria de la nube expulsada lejos de nosotros, era intimidante pensar en las desastrosas consecuencias de que esta hubiera tenido de pasar tan solo unos días antes. Quizás una llamarada parecida es la que Carrington observó. Improbablemente intensa, pero no imposible.&lt;/p&gt;
 
 
-[caption id=&quot;attachment_2435&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot;&gt;&lt;img class=&quot;size-full wp-image-2435&quot; title=&quot;3116651251_11dc28776b_o&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;587&quot; /&gt;&lt;/a&gt; Mancha solar vista desde el observatorio del Teide, 26 de abril del 2006, parte de mi tesis doctoral. http://brunosan.eu/about-2/work/phd/.[/caption]
+[caption id=&quot;attachment_2435&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot;&gt;&lt;img class=&quot;size-full wp-image-2435&quot; title=&quot;3116651251_11dc28776b_o&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;587&quot; /&gt;&lt;/a&gt; Mancha solar vista desde el observatorio del Teide, 26 de abril del 2006, parte de mi tesis doctoral. http://brunosan.euabout-2/work/phd/.[/caption]
 &lt;p style=&quot;text-align: justify;&quot;&gt;Las auroras son fascinantes eventos de inmensa belleza. Las manchas solares, visibles muy raramente a simple vista al atardecer, son también hechos naturales que han sido enigmáticos durante miles de años. Hoy en día, la ciencia, física solar y el estudio del tiempo espacial, nos da muchas respuestas a estos y otros eventos. Cuando ahora vemos una aurora, vemos la misma belleza, pero entendemos su naturaleza, lo que nos lleva a una perspectiva muchísimo más rica. Ver lo que ocurre nos da la misma fascinación visual que nos ha acompañado en la historia, pero permite, además, entender lo que ocurre, lo que nos aporta una satisfacción mental indescriptible. La ciencia nos abre un nuevo tipo de ojos, nos da un sentido solo accesible al privilegio de la ciencia moderna. Es más, podemos acceder a esa admiración por el universo sin necesariamente ver una aurora o una mancha solar. Yo he visto manchas en directo con telescopios, pero nunca he visto una aurora. Nuestra mente es capaz de acceder a ese sentimiento de maravilla solo leyendo y pensando sobre ello, como espero haber conseguido con este artículo.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -593,9 +593,9 @@ El material de este artículo lo he extraído de:
 	
 	<entry>
 		<title>It´s not about the Science, it´s the whole package</title>
-		<link href="http://brunosan.eu//2012/06/02/its-not-only-about-science/"/>
+		<link href="http://brunosan.eu/2012/06/02/its-not-only-about-science/"/>
 		<updated>2012-06-02T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/06/02/its-not-only-about-science</id>
+		<id>http://brunosan.eu/2012/06/02/its-not-only-about-science</id>
 		<content type="html">&lt;p&gt;This is a screencast of my talk the &lt;a href=&quot;http://www.adaptation.arizona.edu/adaptation2012/&quot;&gt;Adaptation Futures&lt;/a&gt; conference in Arizona last month. I present our &lt;a href=&quot;http://index.gain.org&quot;&gt;GAIN Index&lt;/a&gt; to measure the vulnerability of countries to face Adaptation challenges, and their readiness to implement solutions. Beyond the Index, I tried to stress the importance of the &lt;em&gt;whole package&lt;/em&gt;: It is not about making good science, it is not just an academic exercise. From the beginning one needs to think who will be the users, what do they know and what they want to know, and how are you going to present it.&lt;/p&gt;
 
 &lt;p&gt;In particular, consider that many stakeholders in Adaptation are not engaged, or even aware. Our work won´t get much beyond a few academics if your Index needs one hour to be explained. If you get time to talk to a president or a CEO, like we have had, you want to inform them, but first you need to engage them, quickly. This is how we do it.&lt;!--more--&gt;&lt;/p&gt;
@@ -609,9 +609,9 @@ El material de este artículo lo he extraído de:
 	
 	<entry>
 		<title>Scientific value ≠ Perception of the scientific value</title>
-		<link href="http://brunosan.eu//2012/05/18/scientific-value-%25e2%2589%25a0-perception-of-the-scientific-value/"/>
+		<link href="http://brunosan.eu/2012/05/18/scientific-value-%25e2%2589%25a0-perception-of-the-scientific-value/"/>
 		<updated>2012-05-18T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/05/18/scientific-value-%e2%89%a0-perception-of-the-scientific-value</id>
+		<id>http://brunosan.eu/2012/05/18/scientific-value-%e2%89%a0-perception-of-the-scientific-value</id>
 		<content type="html">&lt;p&gt;A russian satellite makes a time lapse of the Earth from space. A truly beautiful video.&lt;/p&gt;
 
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/6twFHqJ03_k &quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
