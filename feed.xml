@@ -4,7 +4,7 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="http://brunosan.eu/feed/" rel="self"/>
  	<link type="text" href="http://brunosan.eu/" rel="alternate"/>
-	<updated>2012-07-19T11:12:11-04:00</updated>
+	<updated>2012-07-23T08:51:05-04:00</updated>
 	<id>http://brunosan.eu/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
@@ -25,6 +25,166 @@ so most inbound links should still work.&lt;/p&gt;
 &lt;p&gt;My old site still lives at &lt;a href=&quot;http://nasonurb.wordpress.com&quot;&gt;Wordpress&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Feel free to send me your comments to &lt;a href=&quot;mailto:brunosan@gmail.com?subject=Feedback%20for%20your%20newsite&quot;&gt;brunosan@gmail.com&lt;/a&gt;. Thanks!&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>A heatmap for all your runs in RunKeeper</title>
+		<link href="http://brunosan.eu//2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper/"/>
+		<updated>2012-07-20T00:00:00-04:00</updated>
+		<id>http://brunosan.eu//2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper</id>
+		<content type="html">&lt;p&gt;This is a map of 2 years running around Washington DC with
+&lt;a href=&quot;www.runkeeper.com&quot;&gt;RunKeeper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width='100%' height='300' frameBorder='1px'
+src='http://a.tiles.mapbox.com/v3/gai.map-ticb4ks9.html#12/38.913/-77.046'&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;  I always wanted to make a [heat]map with all my tracks. I finally got some time to play with
+  &lt;a href=&quot;http://www.tilemill.com&quot;&gt;TileMill&lt;/a&gt; and &lt;a href=&quot;www.mapbox.com&quot;&gt;Mapbox&lt;/a&gt; to
+make it. The map above is the result, and these are the steps to make
+your own:
+  &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Run a few routes :)&lt;/li&gt;
+&lt;li&gt;Get your data from RunKeeper.&lt;/li&gt;
+&lt;li&gt;Import in TileMile&lt;/li&gt;
+&lt;li&gt;Style at will.&lt;/li&gt;
+&lt;li&gt;Use Mapbox for hosting and base layer.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Get your data&lt;/h3&gt;
+
+&lt;p&gt;  Click on &amp;ldquo;export data&amp;rdquo; &lt;a href=&quot;http://runkeeper.com/exportDataForm&quot;&gt;link&lt;/a&gt; under &lt;em&gt;Settings&lt;/em&gt; page in RunKeeper. Select the dates, you might want all your data so just select a wide range. You´ll get the link on your email in a few minutes.&lt;/p&gt;
+
+&lt;p&gt;  &lt;img src=&quot;/media/runkeeper-export.jpg&quot; width=&quot;100%&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;Import your tracks into TileMile&lt;/h3&gt;
+
+&lt;p&gt;You need first to export the gpx tracks into a Shapefile. I got some
+&lt;a href=&quot;http://support.mapbox.com/discussions/tilemill/1331-gpx-to-sqlite&quot;&gt;help&lt;/a&gt; from the awesome people at Mapbox and it turns to be as simple as:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;    ogx2ogx first-track.gpx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Then append the rest of the files in the folder:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gpx/
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt; ls &lt;span class=&quot;nv&quot;&gt;$directory&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;ogr2ogr -append runs &lt;span class=&quot;nv&quot;&gt;$directory$file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;You will have new folder that contains shapefiles with tracks for each
+race, and also another shapefile with all measured positions
+(trackpoints). I´ll only use the tracks.&lt;/p&gt;
+
+&lt;p&gt;In TileMill (available for free &lt;a href=&quot;http://www.mapbox.com/tilemill&quot;&gt;here&lt;/a&gt;) create a new project.
+Then click on add layer, select the shapefile with the tracks, and click
+&amp;ldquo;style and save&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;100%&quot; src=&quot;/media/TileMill-addlayer.jpg&quot; &gt;&lt;/p&gt;
+
+&lt;h3&gt;Style at will.&lt;/h3&gt;
+
+&lt;p&gt;My idea here was to create a heatmap for the routes. The closest thing I
+could think in TileMill is to style the tracks with a wide and very
+transparent trace. E.g. with a transparency of 0.2 you need 5 tracks to
+get a completely opaque trace.&lt;/p&gt;
+
+&lt;p&gt;You can, and should (it´s fun!) play with the styles. I ended up styling
+them as blood arteries, with a green shade around. Zoomed out you get
+the heatmap idea, and if you zoom in, you can see all the individual
+tracks. This gives a funny highway aspects to places I tend to use a
+lot. Here is the style I used:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#tracks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:extraglow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;zoom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#0c7205&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;smooth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#tracks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:extraglow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;zoom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#0c7205&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;smooth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#tracks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:glow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#ffce09&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#tracks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:base&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#fd0505&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The trick to add more than one styling to the track is to use &lt;code&gt;::&lt;/code&gt; like
+in &lt;code&gt;track::glow&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that I am not putting any base map. The reason is that I want to
+add one of the basemaps MapBox provides. More on this later. While
+styling you might want to add some background, you can do that
+activating the MapBox streets layer plugin (under settings) or adding
+a quick style only while you play with the styling:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#ffffff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;Map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;To activate the tooltip when you put the mouse over the track, you need
+to go to the &amp;ldquo;Templates&amp;rdquo; tab (the icon with the hand), then &amp;ldquo;Teaser&amp;rdquo;.
+Use the drop-down menu to select the only layer (&amp;ldquo;tracks&amp;rdquo;) as the source
+of data and, under Content write the text. In my case I just use the
+&lt;em&gt;name&lt;/em&gt; column in the shapefiles: &lt;code&gt;}&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;Use Mapbox for hosting and base layer.&lt;/h3&gt;
+
+&lt;p&gt;Once styled, it´s very easy to host this layer online with MapBox. I´ll
+also use Mapbox to add a nice base map.&lt;/p&gt;
+
+&lt;p&gt;To upload it, you need to authenticate with MapBox under Setting in
+TileMill.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;100%&quot; src=&quot;/media/TileMill-settings.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Once done, you only need to Click on &lt;em&gt;Export&lt;/em&gt; &amp;ndash;&gt; &lt;em&gt;Upload&lt;/em&gt;. In the setting window select the area you want to
+render tiles, the center by default and available zoom levels. The
+bigger the area, and the smaller the zoom level, the longer it will take
+to process. Areas scale exponentially, so keep it small.&lt;/p&gt;
+
+&lt;p&gt;Once finished, you can see it on your MapBox Account. Make a New Map,
+and click on &lt;em&gt;Add a New Layer&lt;/em&gt; to add you track´s layer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;100%&quot; src=&quot;/media/layers-tilemill.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;For the base map, MapBox offers quite some options. My idea here was
+something plain, to let the heatmap shine, so I chose &amp;ldquo;Light&amp;rdquo;. You can still
+style the color palette at will to get exactly what you want, and even
+add markers if you want.&lt;/p&gt;
+
+&lt;p&gt;Last step, once saved, it´s to embed it. You only need to click on the
+share button.&lt;/p&gt;
+
+&lt;p&gt;If you end up making a map with your runs, please send over a link,
+it´d be great to see it.&lt;/p&gt;
+
+&lt;p&gt;Happy styling!&lt;/p&gt;
 </content>
 	</entry>
 	
@@ -604,42 +764,6 @@ El material de este artículo lo he extraído de:
 
 
 &lt;p&gt;I used my Android phone to record the audio. Then, while listening to it later at my hotel room, I made a screencast using QuickTime Player, and put it together using iMovie. I used &lt;a href=&quot;http://www.taskrabbit.com/&quot;&gt;taskrabbit&lt;/a&gt; and I paid someone &lt;a href=&quot;http://www.taskrabbit.com/virtual/t/caption-this-video&quot;&gt;10$ to caption&lt;/a&gt; it using &lt;a href=&quot;http://www.universalsubtitles.org/en/&quot;&gt;Amara&lt;/a&gt;.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Scientific value ≠ Perception of the scientific value</title>
-		<link href="http://brunosan.eu//2012/05/18/scientific-value-%25e2%2589%25a0-perception-of-the-scientific-value/"/>
-		<updated>2012-05-18T00:00:00-04:00</updated>
-		<id>http://brunosan.eu//2012/05/18/scientific-value-%e2%89%a0-perception-of-the-scientific-value</id>
-		<content type="html">&lt;p&gt;A russian satellite makes a time lapse of the Earth from space. A truly beautiful video.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/6twFHqJ03_k &quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
-&lt;p&gt;This reminds me of a text I read many years ago: Carl Sagan was defending the inclusion of visual cameras in scientific payloads, even when the scientific value would be arguable.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-
-&lt;p&gt;Researchers were claiming on the extra weight and limited value, and longevity, of such an instrument, versus the many other things they could put to measure wind speed, chemical composition, &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Carl Sagan´s point was that we need to &lt;strong&gt;connect with society&lt;/strong&gt;, to the humane instinct of visual exploration. It is ok to give up a little bit of extra science if we can get a better overall picture, or link with people. A single image can convey to many more people the awe and wonder of the Universe, and the need to continue the journey, than thousand papers or plots. That´s just our human nature. One of the most important things since I´ve left research is exactly that.&lt;/p&gt;
-
-&lt;p&gt;Almost every single weather satellite in the recent years has had the same capabilities to make this movie of the Earth. But they either chose to put only an infrared camera (needed if you want to see clouds at night) or they never thought of making this Outreach product. The russians did, and they added a camera in the near visible range to have the closest possible to &amp;ldquo;a view from space&amp;rdquo;. They´ve reached &lt;strong&gt;millions&lt;/strong&gt; more of &amp;ldquo;wow moments&amp;rdquo;. With this video we can connect to many concepts, like the importance of satellites, the concept of climate, the Earth has a unity, &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Here´s another example with the ISS and the Earth. You might not even remember the purpose of the ISS (or even that we had humans living there since years)  but you might remember (or you will) this video:&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/Ip2ZGND1I9Q &quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
-&lt;p&gt;Another case, from my experience: My thesis took around 3 years, and 100 days of observations at a telescope. Probably less than 20 people understand it, and I hope it be a small contribution to advance solar physic. One day, at the telescope, I made a 20 seconds video, and then I took a few hours to prepare a simple video of it (here it is &lt;a href=&quot;http://bsan.eu/LbfigS&quot;&gt;http://bsan.eu/LbfigS&lt;/a&gt; ). The &lt;a href=&quot;https://plus.google.com/113118420661689340672&quot;&gt;Astronomy Picture of the Day (APoD)&lt;/a&gt; featured it 3 times, and literally millions of people has seen it. With that video, we can engage in so many concepts of Astronomy, Optics and Solar Physics. And so have told me teachers from literally all around the world when they asked me to use it on their classroom.&lt;/p&gt;
-
-&lt;p&gt;The last example could well be my recent work: We did a Climate change Adaptation Index, and it took a lot of work. Once done, it would have never went very far, if we had not spent significant time and resources to make a visual tool to explore some of the messages. (&lt;a href=&quot;http://index.gain.org/&quot;&gt;index.gain.org&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;The lesson to learn here, to me, is very clear. The &lt;strong&gt;scientific value&lt;/strong&gt; is one stop away from the &lt;strong&gt;societal perception of the scientific value&lt;/strong&gt;, which is tremendously important, and powerful. We must do that extra mile, even at the cost of some more research. &lt;em&gt;There is a painful detachment of S&amp;amp;T and society.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;PS: I can´t remember if that Carl Sagan text was connected to the russian lander on Venus (I doubt it) or to the Viking Mars from +&lt;a href=&quot;https://plus.google.com/113315419190905475766&quot;&gt;NASA Jet Propulsion Laboratory&lt;/a&gt;. This might be part of the Cosmos book. Can´t remember or find it. This is the closest I could find. &lt;a href=&quot;http://history.nasa.gov/SP-4212/ch9.html&quot;&gt;http://history.nasa.gov/SP-4212/ch9.html&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	

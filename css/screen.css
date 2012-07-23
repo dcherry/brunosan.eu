@@ -204,7 +204,6 @@ BUTTONS
 
 
 .share-links {
-   overflow:hidden;
    width:auto;
    text-indent: 0;
 }
@@ -535,7 +534,6 @@ a[href^="http://localhost"]:not(.btn) {
 	body {
 		width: 90%;
 		margin: 0 auto;
-		webkit-text-size-adjust: 150%;
 	}
 	
 	header {
@@ -569,7 +567,12 @@ a[href^="http://localhost"]:not(.btn) {
 		margin: 0 10px;
 	}
 	
-	article {
+	#ad {
+    display: none;
+  }
+
+
+  article {
 		width: 100%;
 		margin: 46px 0 0;
 	}
@@ -578,7 +581,12 @@ a[href^="http://localhost"]:not(.btn) {
 		text-align: center;
 	}
 	
-	section {
+	iframe {
+    border:5px #7BBDBC;
+
+  }
+  
+  section {
 		border-top: 1px solid #bcbcbc;
 		margin-top: 23px;
 		padding-top: 23px;
