@@ -135,22 +135,7 @@ your own:
 <p>You need first to export the gpx tracks into a Shapefile. I got some
 <a href="http://support.mapbox.com/discussions/tilemill/1331-gpx-to-sqlite">help</a> from the awesome people at Mapbox and it turns to be as simple as:</p>
 
-<div class="highlight"><pre><code class="sh">    ogr2ogr first-track.gpx
-</code></pre>
-</div>
-
-
 <p>Then append the rest of the files in the folder:</p>
-
-<div class="highlight"><pre><code class="sh"><span class="c">#!/bin/bash</span>
-<span class="nv">directory</span><span class="o">=</span>gpx/
-<span class="k">for </span>file in <span class="k">$(</span> ls <span class="nv">$directory</span> <span class="k">)</span>
-<span class="k">do</span>
-<span class="k">  </span>ogr2ogr -append runs <span class="nv">$directory$file</span>
-<span class="k">done</span>
-</code></pre>
-</div>
-
 
 <p>You will have new folder that contains shapefiles with tracks for each
 race, and also another shapefile with all measured positions
@@ -175,32 +160,6 @@ the heatmap idea, and if you zoom in, you can see all the individual
 tracks. This gives a funny highway aspects to places I tend to use a
 lot. Here is the style I used:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#tracks</span><span class="o">:</span><span class="nd">:extraglow</span><span class="o">[</span><span class="nt">zoom</span> <span class="o">&lt;</span><span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">5</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="m">#0c7205</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">1</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="n">smooth</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nf">#tracks</span><span class="o">:</span><span class="nd">:extraglow</span><span class="o">[</span><span class="nt">zoom</span> <span class="o">&gt;</span><span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">13</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="m">#0c7205</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">18</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="n">smooth</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">;</span> 
-<span class="p">}</span>
-<span class="nf">#tracks</span><span class="o">:</span><span class="nd">:glow</span> <span class="p">{</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">5</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="m">#ffce09</span><span class="p">;</span>
-    <span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">4</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nf">#tracks</span><span class="o">:</span><span class="nd">:base</span> <span class="p">{</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">1</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="m">#fd0505</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-
 <p>The trick to add more than one styling to the track is to use <code>::</code> like
 in <code>track::glow</code></p>
 
@@ -209,12 +168,6 @@ add one of the basemaps MapBox provides. More on this later. While
 styling you might want to add some background, you can do that
 activating the MapBox streets layer plugin (under settings) or adding
 a quick style only while you play with the styling:</p>
-
-<div class="highlight"><pre><code class="css"><span class="k">@base</span><span class="o">:</span> <span class="nf">#ffffff</span><span class="p">;</span>
-<span class="nt">Map</span> <span class="p">{</span> <span class="k">background-color</span><span class="o">:@</span><span class="n">base</span><span class="p">;</span> <span class="p">}</span>
-</code></pre>
-</div>
-
 
 <p>To activate the tooltip when you put the mouse over the track, you need
 to go to the &ldquo;Templates&rdquo; tab (the icon with the hand), then &ldquo;Teaser&rdquo;.
@@ -299,16 +252,16 @@ it´d be great to see it.</p>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/05/18/case-study-for-an-invitation-system-using-google-apps-script//" target="_top">
-          Case Study for an Invitation System using Google Apps Script.
+        <a href="/2012/09/14/migration-in-progress//" target="_top">
+          Migration in progress
         </a>
       </div>
     </div>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2011/01/25/a-ballistic-back-mapping-tool-for-nasastereo//" target="_top">
-          A [ballistic back-] mapping tool for NASA/STEREO
+        <a href="/2012/07/25/power-searching-with-google//" target="_top">
+          Power Searching with Google
         </a>
       </div>
     </div>
@@ -323,16 +276,16 @@ it´d be great to see it.</p>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2010/11/27/idea-guess-action-button//" target="_top">
-          Idea: Predictive mOS
+        <a href="/2012/07/07/contraportada-de-el-comercio//" target="_top">
+          Contraportada de El Comercio
         </a>
       </div>
     </div>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/01/31/idea-brainstorming-for-apps-for-climate//" target="_top">
-          [Idea] Brainstorming for Apps for Climate
+        <a href="/2012/07/04/Higgs-Bosson-cartoon//" target="_top">
+          Higgs Bosson cartoon
         </a>
       </div>
     </div>
@@ -366,7 +319,7 @@ it´d be great to see it.</p>
 		<a href="http://www.linkedin.com/profile/view?id=20589360&locale=en_US&trk=tab_pro">C.V.</a>
 		</p>
 
-        Powered by <a href="http://github.com/mojombo/jekyll"> Jekyll </a> and <a href="http://www.github.com"> Github</a> [<a href="https://github.com/brunosan/brunosan.eu">Fork me</a>]. (cc) 2004-2012. See <a href="http://brunosan.euLicense">license</a> for details.</p>
+        Powered by <a href="http://github.com/mojombo/jekyll"> Jekyll </a> and <a href="http://www.github.com"> Github</a> [<a href="https://github.com/brunosan/brunosan.eu">Fork me</a>]. (cc) 2004-2012. See <a href="/License">license</a> for details.</p>
 	</footer>
 
 	<div id="feedback">
