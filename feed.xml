@@ -4,7 +4,7 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="/feed/" rel="self"/>
  	<link type="text" href="/" rel="alternate"/>
-	<updated>2012-07-27T11:02:49-04:00</updated>
+	<updated>2012-07-27T16:08:58-04:00</updated>
 	<id>/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
@@ -113,7 +113,7 @@ your own:
 &lt;p&gt;You need first to export the gpx tracks into a Shapefile. I got some
 &lt;a href=&quot;http://support.mapbox.com/discussions/tilemill/1331-gpx-to-sqlite&quot;&gt;help&lt;/a&gt; from the awesome people at Mapbox and it turns to be as simple as:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;    ogr2ogr first-track.gpx
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;    ogr2ogr runs first-track.gpx
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
