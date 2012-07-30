@@ -7,10 +7,10 @@
 
 <head>
   <!-- No canonical for now
-  <link rel="canonical" href="/" />
+  <link rel="canonical" href="http://brunosan.eu" />
   -->
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <title>Tapping on The Beating Heart of Kim Kardashian</title> <meta name="author" content="Bruno Sánchez-Andrade Nuño - brunosan" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <title>Tapping on 'The Beating Heart of Kim Kardashian'</title> <meta name="author" content="Bruno Sánchez-Andrade Nuño - brunosan" />
 
 	<!-- Google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Oxygen|Arvo' rel='stylesheet' type='text/css'>
@@ -100,38 +100,86 @@
 		
 		
 <div id="post-" class="post">
-  <h2>Tapping on The Beating Heart of Kim Kardashian</h2>
+  <h2>Tapping on 'The Beating Heart of Kim Kardashian'</h2>
   <div id="post_content">
-    <p>This was the title of my first <a href="http://www.meetup.com/Data-Science-DC/events/70123182/">Data Science DC
-Meetup</a>. Mike
-Dewar, from bitly,
+    <p>That was the title of my first <a href="http://www.meetup.com/Data-Science-DC/events/70123182/">Data Science DC
+Meetup</a>. <a href="http://www.twitter.com/mikedewar">Mike
+Dewar</a>, from bitly,
 <a href="https://github.com/mikedewar/beatingheart">presented</a> his work on tracking attention. The
 background hypothesis is that attention leads to revenue, and he wants
 to measure attention at any given time by means of click rates. With bily he has access to <strong>all</strong> clicks on
-shortended links. The problem is then to transform that stream on single
+shortended links. The problem is then to transform that stream of single
 events into an attention function estimate in real time.</p>
 
 <p>The strange title comes from the observation that <em>&ldquo;[The online presence of] Kim Kardashian is a dynamic input/output system that maps attention onto revenue&rdquo;</em>. More clicks, more attention, more money.</p>
 
-<p>I found the seminar very interesting. I did make several questions,  but I also left with many more and some ideas. But first a short summary <a href="https://github.com/mikedewar/beatingheart">using his slides</a>:</p>
+<p>I found the seminar very interesting. I did make several questions,  but I also left with many more and some ideas that I post here. But first a short summary <a href="https://github.com/mikedewar/beatingheart">using his slides</a>:</p>
 
 <!--more-->
 
 
-<p>The problem lies in that the input stream for bit.ly is set of single click events
+<p>The problem lies in that the input stream for bit.ly is a set of single click events
 (and the metadata, like IP, URL or cookie). Since bitly has a 1 second
-resolution for clicks, it looks soemething like this:</p>
+resolution for clicks, it looks something like this:</p>
 
 <p><a href="/media/clicks-kim.png "> <img width="100%" src="/media/clicks-kim.png "></a></p>
 
+<p>And for each click the meta data, with all these variables:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="s2">&quot;a&quot;</span>: <span class="s2">&quot;Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46</span>
+<span class="s2">(KHTML, like Gecko) Mobile/9B206 Twitter for iPad&quot;</span>,
+<span class="s2">&quot;c&quot;</span>: <span class="s2">&quot;US&quot;</span>,
+<span class="s2">&quot;nk&quot;</span>: 1,
+<span class="s2">&quot;tz&quot;</span>: <span class="s2">&quot;America/Los_Angeles&quot;</span>,
+<span class="s2">&quot;gr&quot;</span>: <span class="s2">&quot;WA&quot;</span>,
+<span class="s2">&quot;g&quot;</span>: <span class="s2">&quot;NDeWi3&quot;</span>,
+<span class="s2">&quot;i&quot;</span>: <span class="s2">&quot;96fa514376a93c1641bcea90dbc4b07a&quot;</span>,
+<span class="s2">&quot;h&quot;</span>: <span class="s2">&quot;NDeWi1&quot;</span>,
+<span class="s2">&quot;k&quot;</span>: <span class="s2">&quot;4f488a1c-0025f-049f2-301cf10a&quot;</span>,
+<span class="s2">&quot;l&quot;</span>: <span class="s2">&quot;plakshmi&quot;</span>,
+<span class="s2">&quot;al&quot;</span>: <span class="s2">&quot;en-us&quot;</span>,
+<span class="s2">&quot;topic&quot;</span>: <span class="s2">&quot;food&quot;</span>,
+<span class="s2">&quot;p&quot;</span>: <span class="s2">&quot;new&quot;</span>,
+<span class="s2">&quot;hh&quot;</span>: <span class="s2">&quot;bit.ly&quot;</span>,
+<span class="s2">&quot;r&quot;</span>: <span class="s2">&quot;direct&quot;</span>,
+<span class="s2">&quot;u&quot;</span>: <span class="s2">&quot;http://www.padmalakshmi.com/po...&quot;</span>,
+<span class="s2">&quot;t&quot;</span>: 1341021591,
+<span class="s2">&quot;hc&quot;</span>: 1340637617,
+<span class="s2">&quot;cy&quot;</span>: <span class="s2">&quot;Seattle&quot;</span>,
+<span class="s2">&quot;ovi&quot;</span>: <span class="o">{</span>
+<span class="s2">&quot;count&quot;</span>: 599,
+<span class="s2">&quot;proba&quot;</span>: <span class="o">[</span>
+  0.86667,
+  0.13333
+<span class="o">]</span>
+<span class="o">}</span>,
+<span class="s2">&quot;ll&quot;</span>: <span class="o">[</span>
+ 47.5951,
+ -122.3326
+ <span class="o">]</span>
+</code></pre>
+</div>
+
+
+<p>BTW, they even provide a public feed with click events for all .gov .mil
+shortlinks (with anonymized data). To see the live stream of clicks run this
+on the terminal:</p>
+
+<pre><code>curl http://developer.usa.gov/1usagov
+</code></pre>
+
+<h3>Back to Kim Kardashian</h3>
+
 <p>The core of his work is to convert that stream of deltas (clicks) into a
-function, so he can measure the rate of clicks any time. First solution
+function, so he can measure the rate of clicks any time.</p>
+
+<p>First solution
 is to make an histogram.</p>
 
 <p><a href="/media/histogram-kim.png  "> <img width="100%" src="/media/histogram-kim.png  "></a></p>
 
 <p>Problems here are numerous. How to select the bin size? When to start?
-Furthermore, since the click stream is higly stochastic, bin sizes
+Furthermore, since the click stream is highly stochastic, bin sizes
 really affect the estimated rates&hellip; <strong>Phase and amplitude are ill treated</strong>.</p>
 
 <p>Next on the list would be to smooth the deltas with&hellip; a Gaussian
@@ -139,15 +187,17 @@ really affect the estimated rates&hellip; <strong>Phase and amplitude are ill tr
 
 <p><a href="/media/gaussian.png   "> <img width="100%" src="/media/gaussian.png   "></a></p>
 
-<p>Good thing now is that the Gaussian at any point <em>feels</em> the clicks much
-better. No phase problem, <strong>but</strong> still the amplitude of the Gaussian is
-a free parameter, smoothing the signal. However, the biggest problem is that
+<p>With a Gaussian smooth, any point <em>feels</em> the clicks around it. No phase problem, <strong>but</strong> still the amplitude of the Gaussian is
+a free parameter. The wider the shape, the more clicks it integrates and
+therefore the less variations it can register.</p>
+
+<p>However, the biggest problem is that
 a Gaussian at time <em>t</em> needs data before <em>and</em> after. Since this problem
 is oriented towards a real time measure, using a Gaussian forces us to wait at
-least a couple of gaussian widths to pick up the incoming tail. If you
+least a couple of Gaussian widths to pick up the incoming tail. If you
 make the Gaussian very narrow to make it quick, you start to pick up a
 lot of noise. We are trying to oversample a function
-that is undersampling the metric we are after (like interpolating into
+that is under sampling the metric we are after (like interpolating into
 seconds a GPS track that is sampled every minute with low resolution). I
 would not go below the standard deviation of the time deltas.</p>
 
@@ -159,8 +209,8 @@ two free parameters can be linked to the lag/resolution of the system.</p>
 
 <p><a href="/media/gamma.png  "> <img width="100%" src="/media/gamma.png  "></a></p>
 
-<p>You still have the lower threshold for noise, but it yields beatiful
-results. Good enought for the real part.</p>
+<p>You still have the lower threshold for noise, but it yields beautiful
+results. Good enough for the real part.</p>
 
 <h3>The beating heart</h3>
 
@@ -180,12 +230,12 @@ times less attention.</p>
 
 <h3>Tapping on the beating heart</h3>
 
-<p>The beauty of these plots is having so many dimensions of information available.
-Bit.ly stores all this for each click:</p>
+<p>The beauty of these plots is having so many dimensions of information available.</p>
 
-<p><strong>URL origin</strong>
-On the plot above, each color represents a different shortlink for the
-same link. On the plot these nubmers are stacked. That is,
+<p><strong>URL origin</strong></p>
+
+<p>On the plot above, each color represents a different shortlink for the
+same link. On the plot these numbers are stacked. That is,
 we can read that Kim Kardashian gets most of the attention from one source, and it fades away
 very quickly.</p>
 
@@ -194,19 +244,47 @@ multiple peaks of all sizes.</p>
 
 <p><strong>User targeting</strong></p>
 
+<p>Since every click can be linked to a cookie and IP, it would be fairly
+easy to separate the users into interests and attention level. Or more
+specifically, a which attention level they click. E.g. target those
+users who contribute the earliest to rising attention to a particular
+set of famous people.</p>
+
+<p>One could also do the same with IP and make maps
+of attention, even plotting the timeline how the attention shifts in
+within the map, or by time, or by browser (computer versus mobile for
+example).</p>
+
+<p>I was glad Mike answered to this question saying this would hopefully be the
+last money to tap from this data.</p>
+
 <p><strong>Dropping clicks</strong></p>
 
-<p><strong>Ergodicity of clicks</strong>
-I could not help it but wonder if one could find a parameter space where the
+<p>It seems that right now bit.ly stores every click to make this
+attention analysis, and they were interested in how to drop some of
+those clicks, so they can have similar results using less data or
+resources.</p>
+
+<p>I can imagine, and Mike confirmed, that it is possible to filter those
+user who are consistently in the rising part of the attention curve, and
+those who are on the tail. Once selected one could randomly drop a
+subset of those and make the correction.</p>
+
+<p><strong>Ergodicity of clicks</strong></p>
+
+<p>I could not help it but wonder if one could find a parameter space where the
 ergodic principles applies. This would be great since it removes the
 depence with time.</p>
 
-<p>Basically the <a href="http://en.wikipedia.org/wiki/Ergodic_theory">ergodic principle</a>
- sustains that the time average is related to the space average. My
-hypothesis is that it might possible to indentify a set of IPs, or
+<p>Basically the <a href="http://en.wikipedia.org/wiki/Ergodic_theory">ergodic hypothesis</a>
+ aims to relate the time average to the space average. For example
+the average of throwing 100 dices, is the same as the average of
+throwing once dice 100 times.</p>
+
+<p>My hypothesis is that it might possible to identify a set of IPs, or
 sources where the attention achieved in time (peaks) is related with the
-attention achieved in space. If that were the case, even partially, one
-could pinpoint and estimate the maximum attention for emerging news, before reaching this maximum.</p>
+attention achieved in space. This <em>ergodic regions</em> are proxies for the attention in time. If that were the case, even partially, one
+could pinpoint and estimate the maximum attention for emerging news, well before reaching this maximum.</p>
 
   </div>
 
@@ -221,10 +299,10 @@ could pinpoint and estimate the maximum attention for emerging news, before reac
 	
         <div class='button share-links'>
           <ul>
-            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/" data-via="brunosan">Tweet</a>
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://brunosan.eu/2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/" data-via="brunosan">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            <li><div class="fb-like" data-width="0" data-href="//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
-            <li><g:plusone annotation="none" size="medium" href="//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/"></g:plusone>
+            <li><div class="fb-like" data-width="0" data-href="http://brunosan.eu/2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+            <li><g:plusone annotation="none" size="medium" href="http://brunosan.eu/2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/"></g:plusone>
           </ul>
           </div>
  </p>
@@ -233,7 +311,7 @@ could pinpoint and estimate the maximum attention for emerging news, before reac
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'brunosan'; // required: replace example with your forum shortname
-    //var disqus_url = '//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/';
+    //var disqus_url = 'http://brunosan.eu/2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/';
     //var disqus_developer = 1; // developer mode is on
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -252,24 +330,16 @@ could pinpoint and estimate the maximum attention for emerging news, before reac
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/09/14/migration-in-progress//" target="_top">
-          Migration in progress
+        <a href="/2011/01/25/a-ballistic-back-mapping-tool-for-nasastereo//" target="_top">
+          A [ballistic back-] mapping tool for NASA/STEREO
         </a>
       </div>
     </div>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/07/25/power-searching-with-google//" target="_top">
-          Power Searching with Google
-        </a>
-      </div>
-    </div>
-  
-    <div class="related-post">
-      <div class="title">
-        <a href="/2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper//" target="_top">
-          A heatmap for all your runs in RunKeeper
+        <a href="/2012/05/18/case-study-for-an-invitation-system-using-google-apps-script//" target="_top">
+          Case Study for an Invitation System using Google Apps Script.
         </a>
       </div>
     </div>
@@ -284,8 +354,16 @@ could pinpoint and estimate the maximum attention for emerging news, before reac
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/07/07/contraportada-de-el-comercio//" target="_top">
-          Contraportada de El Comercio
+        <a href="/2010/10/28/crowdsourcing-development//" target="_top">
+          Crowdsourcing Development
+        </a>
+      </div>
+    </div>
+  
+    <div class="related-post">
+      <div class="title">
+        <a href="/2008/11/11/work//" target="_top">
+          Astrophysics
         </a>
       </div>
     </div>

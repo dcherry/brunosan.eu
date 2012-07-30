@@ -4,7 +4,7 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="/feed/" rel="self"/>
  	<link type="text" href="/" rel="alternate"/>
-	<updated>2012-07-27T16:08:58-04:00</updated>
+	<updated>2012-07-29T18:42:18-04:00</updated>
 	<id>/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
@@ -14,7 +14,7 @@
 	
 	<entry>
 		<title>Migration in progress</title>
-		<link href="//2012/09/14/migration-in-progress/"/>
+    <link href="http://brunosan.eu//2012/09/14/migration-in-progress/"/>
 		<updated>2012-09-14T00:00:00-04:00</updated>
 		<id>//2012/09/14/migration-in-progress</id>
 		<content type="html">&lt;p&gt;I´m in the progress of moving my blog into Jekyll. I´m halfway done, so I´ve decided to publish the new version.&lt;/p&gt;
@@ -30,7 +30,7 @@ so most inbound links should still work.&lt;/p&gt;
 	
 	<entry>
 		<title>Power Searching with Google</title>
-		<link href="//2012/07/25/power-searching-with-google/"/>
+    <link href="http://brunosan.eu//2012/07/25/power-searching-with-google/"/>
 		<updated>2012-07-25T00:00:00-04:00</updated>
 		<id>//2012/07/25/power-searching-with-google</id>
 		<content type="html">&lt;p&gt;Just got the certificate for my participation in &lt;a href=&quot;http://www.google.com/insidesearch/landing/powersearching.html&quot;&gt;Power Searching
@@ -76,8 +76,199 @@ Doodle&lt;/a&gt; page (&amp;hellip;)&lt;/p&gt;
 	</entry>
 	
 	<entry>
+		<title>Tapping on 'The Beating Heart of Kim Kardashian'</title>
+    <link href="http://brunosan.eu//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian/"/>
+		<updated>2012-07-23T00:00:00-04:00</updated>
+		<id>//2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian</id>
+		<content type="html">&lt;p&gt;That was the title of my first &lt;a href=&quot;http://www.meetup.com/Data-Science-DC/events/70123182/&quot;&gt;Data Science DC
+Meetup&lt;/a&gt;. &lt;a href=&quot;http://www.twitter.com/mikedewar&quot;&gt;Mike
+Dewar&lt;/a&gt;, from bitly,
+&lt;a href=&quot;https://github.com/mikedewar/beatingheart&quot;&gt;presented&lt;/a&gt; his work on tracking attention. The
+background hypothesis is that attention leads to revenue, and he wants
+to measure attention at any given time by means of click rates. With bily he has access to &lt;strong&gt;all&lt;/strong&gt; clicks on
+shortended links. The problem is then to transform that stream of single
+events into an attention function estimate in real time.&lt;/p&gt;
+
+&lt;p&gt;The strange title comes from the observation that &lt;em&gt;&amp;ldquo;[The online presence of] Kim Kardashian is a dynamic input/output system that maps attention onto revenue&amp;rdquo;&lt;/em&gt;. More clicks, more attention, more money.&lt;/p&gt;
+
+&lt;p&gt;I found the seminar very interesting. I did make several questions,  but I also left with many more and some ideas that I post here. But first a short summary &lt;a href=&quot;https://github.com/mikedewar/beatingheart&quot;&gt;using his slides&lt;/a&gt;:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+
+&lt;p&gt;The problem lies in that the input stream for bit.ly is a set of single click events
+(and the metadata, like IP, URL or cookie). Since bitly has a 1 second
+resolution for clicks, it looks something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/clicks-kim.png &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/clicks-kim.png &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And for each click the meta data, with all these variables:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;(KHTML, like Gecko) Mobile/9B206 Twitter for iPad&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;c&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;US&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;nk&amp;quot;&lt;/span&gt;: 1,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;tz&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;America/Los_Angeles&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;gr&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;WA&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;NDeWi3&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;96fa514376a93c1641bcea90dbc4b07a&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;h&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;NDeWi1&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;k&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;4f488a1c-0025f-049f2-301cf10a&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;l&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;plakshmi&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;al&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;en-us&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;topic&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;food&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;p&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;new&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;hh&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;bit.ly&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;direct&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;u&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.padmalakshmi.com/po...&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;t&amp;quot;&lt;/span&gt;: 1341021591,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;hc&amp;quot;&lt;/span&gt;: 1340637617,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;cy&amp;quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&amp;quot;Seattle&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;ovi&amp;quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;count&amp;quot;&lt;/span&gt;: 599,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;proba&amp;quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+  0.86667,
+  0.13333
+&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;ll&amp;quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+ 47.5951,
+ -122.3326
+ &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;BTW, they even provide a public feed with click events for all .gov .mil
+shortlinks (with anonymized data). To see the live stream of clicks run this
+on the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl http://developer.usa.gov/1usagov
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Back to Kim Kardashian&lt;/h3&gt;
+
+&lt;p&gt;The core of his work is to convert that stream of deltas (clicks) into a
+function, so he can measure the rate of clicks any time.&lt;/p&gt;
+
+&lt;p&gt;First solution
+is to make an histogram.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/histogram-kim.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/histogram-kim.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Problems here are numerous. How to select the bin size? When to start?
+Furthermore, since the click stream is highly stochastic, bin sizes
+really affect the estimated rates&amp;hellip; &lt;strong&gt;Phase and amplitude are ill treated&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next on the list would be to smooth the deltas with&amp;hellip; a Gaussian
+(simple enough):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/gaussian.png   &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/gaussian.png   &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With a Gaussian smooth, any point &lt;em&gt;feels&lt;/em&gt; the clicks around it. No phase problem, &lt;strong&gt;but&lt;/strong&gt; still the amplitude of the Gaussian is
+a free parameter. The wider the shape, the more clicks it integrates and
+therefore the less variations it can register.&lt;/p&gt;
+
+&lt;p&gt;However, the biggest problem is that
+a Gaussian at time &lt;em&gt;t&lt;/em&gt; needs data before &lt;em&gt;and&lt;/em&gt; after. Since this problem
+is oriented towards a real time measure, using a Gaussian forces us to wait at
+least a couple of Gaussian widths to pick up the incoming tail. If you
+make the Gaussian very narrow to make it quick, you start to pick up a
+lot of noise. We are trying to oversample a function
+that is under sampling the metric we are after (like interpolating into
+seconds a GPS track that is sampled every minute with low resolution). I
+would not go below the standard deviation of the time deltas.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/gaus-kim.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/gaus-kim.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This when Mike takes out the &lt;a href=&quot;http://en.wikipedia.org/wiki/Gamma_distribution&quot;&gt;gamma function&lt;/a&gt;. The best property is that
+it only spreads in one direction, but it is also nice that one of the
+two free parameters can be linked to the lag/resolution of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/gamma.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/gamma.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You still have the lower threshold for noise, but it yields beautiful
+results. Good enough for the real part.&lt;/p&gt;
+
+&lt;h3&gt;The beating heart&lt;/h3&gt;
+
+&lt;p&gt;So, what happens when Kim writes a blog post about having &lt;a href=&quot;http://www.celebuzz.com/2012-07-10/kim-kardashian-thanks-to-all-10-million-of-you/&quot;&gt;10 million
+likes&lt;/a&gt;? She gets a burst of 2 clicks per seconds, which decay quite fast. Using the approach above we can get an &lt;em&gt;attention function&lt;/em&gt; for that event, for each shortlink and the clicks people do on those links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/kim_attention.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/kim_attention.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What about the Cookie moster &lt;a href=&quot;http://www.youtube.com/watch?v=-qTIGg3I5y8&quot;&gt;video&lt;/a&gt;? 4
+times less attention.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/cookie_monster_attn.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/cookie_monster_attn.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Obama?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/media/obama_attn.png  &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/obama_attn.png  &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Tapping on the beating heart&lt;/h3&gt;
+
+&lt;p&gt;The beauty of these plots is having so many dimensions of information available.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;URL origin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;On the plot above, each color represents a different shortlink for the
+same link. On the plot these numbers are stacked. That is,
+we can read that Kim Kardashian gets most of the attention from one source, and it fades away
+very quickly.&lt;/p&gt;
+
+&lt;p&gt;Obama´s attention, on the other side, anchors on many many sources, with
+multiple peaks of all sizes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User targeting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Since every click can be linked to a cookie and IP, it would be fairly
+easy to separate the users into interests and attention level. Or more
+specifically, a which attention level they click. E.g. target those
+users who contribute the earliest to rising attention to a particular
+set of famous people.&lt;/p&gt;
+
+&lt;p&gt;One could also do the same with IP and make maps
+of attention, even plotting the timeline how the attention shifts in
+within the map, or by time, or by browser (computer versus mobile for
+example).&lt;/p&gt;
+
+&lt;p&gt;I was glad Mike answered to this question saying this would hopefully be the
+last money to tap from this data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dropping clicks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems that right now bit.ly stores every click to make this
+attention analysis, and they were interested in how to drop some of
+those clicks, so they can have similar results using less data or
+resources.&lt;/p&gt;
+
+&lt;p&gt;I can imagine, and Mike confirmed, that it is possible to filter those
+user who are consistently in the rising part of the attention curve, and
+those who are on the tail. Once selected one could randomly drop a
+subset of those and make the correction.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ergodicity of clicks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I could not help it but wonder if one could find a parameter space where the
+ergodic principles applies. This would be great since it removes the
+depence with time.&lt;/p&gt;
+
+&lt;p&gt;Basically the &lt;a href=&quot;http://en.wikipedia.org/wiki/Ergodic_theory&quot;&gt;ergodic hypothesis&lt;/a&gt;
+ aims to relate the time average to the space average. For example
+the average of throwing 100 dices, is the same as the average of
+throwing once dice 100 times.&lt;/p&gt;
+
+&lt;p&gt;My hypothesis is that it might possible to identify a set of IPs, or
+sources where the attention achieved in time (peaks) is related with the
+attention achieved in space. This &lt;em&gt;ergodic regions&lt;/em&gt; are proxies for the attention in time. If that were the case, even partially, one
+could pinpoint and estimate the maximum attention for emerging news, well before reaching this maximum.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
 		<title>A heatmap for all your runs in RunKeeper</title>
-		<link href="//2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper/"/>
+    <link href="http://brunosan.eu//2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper/"/>
 		<updated>2012-07-20T00:00:00-04:00</updated>
 		<id>//2012/07/20/a-heatmap-for-all-your-runs-in-runkeeper</id>
 		<content type="html">&lt;p&gt;This is a map of 2 years running around Washington DC with
@@ -237,7 +428,7 @@ it´d be great to see it.&lt;/p&gt;
 	
 	<entry>
 		<title>Next Steps in Open Data</title>
-		<link href="//2012/07/15/Next-steps-in-Open-Data/"/>
+    <link href="http://brunosan.eu//2012/07/15/Next-steps-in-Open-Data/"/>
 		<updated>2012-07-15T00:00:00-04:00</updated>
 		<id>//2012/07/15/Next-steps-in-Open-Data</id>
 		<content type="html">&lt;p&gt;Last week DC hosted the &lt;a href=&quot;http://www.data.gov/communities/conference&quot;&gt;Open Government Data
@@ -406,7 +597,7 @@ focus, not the prizes.&lt;/p&gt;
 	
 	<entry>
 		<title>Contraportada de El Comercio</title>
-		<link href="//2012/07/07/contraportada-de-el-comercio/"/>
+    <link href="http://brunosan.eu//2012/07/07/contraportada-de-el-comercio/"/>
 		<updated>2012-07-07T00:00:00-04:00</updated>
 		<id>//2012/07/07/contraportada-de-el-comercio</id>
 		<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elcomercio.es/v/20120707/gente/asturias-morrina-frustracion-20120707.html&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-2484&quot; title=&quot;Screen Shot 2012-07-07 at 10.44.04&quot; src=&quot;/media/contraportadaelcomercio.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;212&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -485,7 +676,7 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 	
 	<entry>
 		<title>Higgs Bosson cartoon</title>
-		<link href="//2012/07/04/Higgs-Bosson-cartoon/"/>
+    <link href="http://brunosan.eu//2012/07/04/Higgs-Bosson-cartoon/"/>
 		<updated>2012-07-04T00:00:00-04:00</updated>
 		<id>//2012/07/04/Higgs-Bosson-cartoon</id>
 		<content type="html">&lt;p&gt;In case you want to know what´s the &lt;a href=&quot;http://www.nytimes.com/2012/07/05/science/cern-physicists-may-have-discovered-higgs-boson-particle.html?pagewanted=all&quot;&gt;fuss about the Higgs bosson&lt;/a&gt; and the CERN news.&lt;/p&gt;
@@ -501,7 +692,7 @@ Siempre hay muchos lugares donde me gustaría perderme un par de días, pero no 
 	
 	<entry>
 		<title>Jekyll and Pull Requests</title>
-		<link href="//2012/07/01/jekyll-pull-requests/"/>
+    <link href="http://brunosan.eu//2012/07/01/jekyll-pull-requests/"/>
 		<updated>2012-07-01T00:00:00-04:00</updated>
 		<id>//2012/07/01/jekyll-pull-requests</id>
 		<content type="html">&lt;p&gt;&lt;strong&gt;I´m migrating my blog to this new system. Sorry for the many bugs. I´ll
@@ -584,7 +775,7 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
 	
 	<entry>
 		<title>Rio+20. Where the "side events" are the main event</title>
-		<link href="//2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
+    <link href="http://brunosan.eu//2012/06/26/rio20-where-the-side-events-are-the-main-event/"/>
 		<updated>2012-06-26T00:00:00-04:00</updated>
 		<id>//2012/06/26/rio20-where-the-side-events-are-the-main-event</id>
 		<content type="html">&lt;p&gt;[Cross posted at &lt;a href=&quot;http://news.gain.org/post/25929948555/rio-20-were-the-side-events-are-the-main-event&quot;&gt;GAIN News&lt;/a&gt;]&lt;/p&gt;
@@ -670,7 +861,7 @@ Claudio Szlafsztein, PhD (&lt;a href=&quot;http://gain.org/team/claudio-szlafszt
 	
 	<entry>
 		<title>Rio+20 stuck on traffic for a year, every day</title>
-		<link href="//2012/06/24/logistics-and-rio20/"/>
+    <link href="http://brunosan.eu//2012/06/24/logistics-and-rio20/"/>
 		<updated>2012-06-24T00:00:00-04:00</updated>
 		<id>//2012/06/24/logistics-and-rio20</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;http://farm5.staticflickr.com/4090/4993990030_b10fd201bb.jpg&quot; alt=&quot;rio traffic&quot; width=&quot;500&quot; height=&quot;375&quot; /&gt;&lt;/p&gt;
@@ -703,97 +894,6 @@ The green wears out at the UN conference&lt;/p&gt;
 
 
 &lt;p style=&quot;text-align: justify;&quot;&gt;I can only fear what will happen on the Soccer &lt;a href=&quot;http://en.wikipedia.org/wiki/2014_FIFA_World_Cup&quot;&gt;World Cup&lt;/a&gt; in 2 years. After all, the Rio+20 conference is no more than a few days of up to 50.000 people than come to work. World Cup people will be there to enjoy the games, and I am afraid will not be happy sitting 2 hours on a otherwise 30 minutes bus ride.&lt;/p&gt;
-
-</content>
-	</entry>
-	
-	<entry>
-		<title>El Sol y sus Tormentas, en Prímula</title>
-		<link href="//2012/06/20/el-sol-y-sus-tormentas-en-primula/"/>
-		<updated>2012-06-20T00:00:00-04:00</updated>
-		<id>//2012/06/20/el-sol-y-sus-tormentas-en-primula</id>
-		<content type="html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot;&gt;&lt;img class=&quot;aligncenter  wp-image-2429&quot; title=&quot;Screen Shot 2012-06-09 at 22.44.27&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/screen-shot-2012-06-09-at-22-44-27.png&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;234&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;p&gt;Hoy se presenta el nuevo número del&lt;a href=&quot;http://ccprimula.blogspot.com/&quot;&gt; Cuaderno Cultural Prímula&lt;/a&gt;, en el cual colaboro con un artículo sobre el Sol: &amp;ldquo;&lt;em&gt;El Sol y sus Tormentas&lt;/em&gt;&amp;rdquo;. &lt;em&gt;Prímula&lt;/em&gt; es una revista gratuita del &lt;a href=&quot;http://www.flickr.com/photos/homana/5960414769/&quot;&gt;Hospital de Cabueñes de Gijón&lt;/a&gt; (Asturias). Se publica dos veces al año y está formada por artículos donados por sus autores. Se puede descargar en su web y se imprime para ser distribuida gratuitamente en el Hospital para aquellos que están internos o de visita.&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;Prímula es un cuaderno cultural en sentido amplio, gestado, confeccionado y distribuido por un conjunto de personas que desarrollan su actividad profesional en el Hospital de Cabueñes (Gijón) y en el que colaboran los usuarios o pacientes  ingresados y ambulatorios) y sus familiares.&lt;/blockquote&gt;
-
-
-&lt;p&gt;Ha sido un placer escribirlo y un honor pensar en que quizás pueda hacer más ameno parte del tiempo que algunos lectores han de pasar en el Hospital. Gracias Prímula!&lt;/p&gt;
-
-&lt;p&gt;Aquí enlazo una &lt;a href=&quot;https://docs.google.com/file/d/0B4xJVrXz_YHISFc5dUhfQllTWWc/edit&quot;&gt;copia de la revista&lt;/a&gt;, y adjunto el texto del artículo,&lt;strong&gt; sin maquetar&lt;/strong&gt;. He de dar las gracias a todos aquellos que me dísteis vuestra opinión cuando publiqué &lt;a href=&quot;https://docs.google.com/document/d/1I1ob7FD5y2QrDrbC1x42C00C6pIvdcWPZ6xNTXfFxeA/edit&quot;&gt;el borrado en un Google Doc&lt;/a&gt; y, por supuesto, a Aurora, gestora de Prímula.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_2431&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/carrington_richard_sunspots_1859.jpeg&quot;&gt;&lt;img class=&quot;size-full wp-image-2431&quot; title=&quot;Carrington_Richard_sunspots_1859&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/carrington_richard_sunspots_1859.jpeg&quot; alt=&quot;&quot; width=&quot;500&quot; height=&quot;312&quot; /&gt;&lt;/a&gt; Dibujo original de Carrington del 1 de septiembre de 1859. Los brillos aparecieron en A y B. Se movieron en cinco minutos hasta C y D, donde desaparecieron. [Imagen: Dominio público].[/caption]&lt;/p&gt;
-
-&lt;div&gt;
-&lt;div&gt;
-&lt;div&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;Uno de septiembre de 1859 en mitad del campo, a las afueras de Londres. Un día soleado y tranquilo. Carrington, un joven de 33 años de familia adinerada y apasionado por la astronomía, usa su telescopio para observar el Sol. Le ha puesto unos filtros para disminuir el peligroso brillo y poder ver su superficie.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;div&gt;
-
-El Sol es un objeto majestuoso, casi inmaculado. El universo en esta época es algo perfecto, incluso predecible gracias a las leyes de Newton. Todavía no ha nacido Einstein, no hay teoría del caos, no hay cuántica. La física es determinista y causal, con pocos enigmas importantes por explicar. El Sol que Carrington observa es un objeto celeste de evolución muy lenta y majestuosa, casi estático. De vez en cuando se ven manchas en su superficie. Unos creen que son claros en sus nubes que permiten ver la verdadera superficie del Sol. Otros creen que es la cima de montañas solares. Sea como fuere, aparecen en cuestión de días y pueden durar semanas. Carrington quiere dibujar la mancha que ya apareció unos días antes. Es de las más grandes nunca vistas, como diez veces el tamaño de la Tierra. Bien situada cerca del centro. Para poder plasmarla mejor y medirla con cuidado, Carrington pone unos pequeños hilos a través de la mirilla del instrumento y tiene que contar los segundos que la mancha tarda en pasar según el Sol se mueve en el cielo.
-
-[caption id=&quot;attachment_2432&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/6777302867_e347925294_o.jpeg&quot;&gt;&lt;img class=&quot;size-full wp-image-2432&quot; title=&quot;6777302867_e347925294_o&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/6777302867_e347925294_o.jpeg&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;426&quot; /&gt;&lt;/a&gt; Aurora boreal en Abisko (Suecia), 22 de enero del 2012. [Imagen: usuario nate2b de Flickr].[/caption]Carrington observa con fascinación y paciencia esta inmensa estructura en cuyo interior entraría varias veces la Tierra entera. Cuenta mentalmente con ayuda del tictac del reloj. No hay prisa y quiere hacer un buen diagrama. De repente aparecen dos puntos brillantes cerca del borde de la mancha. Carrington piensa que algún reflejo se ha colado en su telescopio y mueve un poco la montura, pero los puntos brillantes siguen fijos en la mancha. No son un reflejo. Están en el Sol. Son grandes, inmensos. Del tamaño de la Tierra entera. Cada uno. Está viendo, en directo, algo que nunca nadie ha visto. No es difícil imaginar su corazón acelerar con nerviosismo y sin saber realmente qué pasa. Su mente científica se apresura a buscar la mejor forma de afrontar lo que ve y no entiende. Necesita testigos que confirmen su descubrimiento. ¿Habrá alguien más, en algún observatorio, observando lo mismo? Imposible saberlo hasta dentro de semanas. Carrington, moralmente obligado, se va corriendo a buscar a alguien para que sea testigo. Vuelve antes de un minuto y el brillo sigue ahí. Es más, se mueve a través de la mancha. No tiene sentido. En una época donde el tren a vapor difícilmente llega a los 70 km/h, ver algo moverse cuatro veces el diámetro de la Tierra en cinco minutos escapa de toda lógica. Finalmente los puntos desaparecen. De hecho, no hay rastro de que alguna vez hayan existido. Aun sin poder procesar lo que acaba de ver, Carrington termina su dibujo y registra todo lo que puede relacionado con ese brillo mientras el nerviosismo del momento se transforma en la excitante responsabilidad de registrar lo que seguramente sea un evento histórico. Si alguien le cree.&lt;/div&gt;
-&lt;/div&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-
-Tan pronto como pudo, Carrington se fue al observatorio más cercano esperando que alguien más hubiera visto esa “llamarada”. Nadie estaba usando el telescopio cuando pasó. No obstante, la brújula del lugar sí registró bruscos cambios, exactamente a la misma hora; pero había tardado varias horas en volver a la normalidad. De hecho, unas horas después había vuelto a registrar algo, esta vez aún más intenso y durante más tiempo. No solo eso, sino que se empezaron a encontrar avisos de efectos extraños en todo el mundo a la misma hora: los telégrafos dejaron de funcionar, o mandaban señales incluso cuando se desconectaban los cables, los registros automáticos de mensajes prendían fuego espontáneamente. Llegaron informes de nubes brillantes en el cielo, tan al norte como Canadá, pero también cerca del ecuador, en Cuba. Las luces eran tan brillantes que se podía leer un periódico por la noche sin dificultad. Marinos cruzando el estrecho de Magallanes se despertaron a ver un mar de sangre, reflejo de un cielo nocturno completamente rojizo y brillante -lo que los antiguos ya llamaban auroras-, a la vez que observaban un aura de luz alrededor de los mástiles del barco -fuegos de San Telmo-.
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;div&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-
-Estas luces brillantes, &lt;em&gt;auroras&lt;/em&gt;, no tenían origen conocido o explicación plausible. Son brillos que ondulan, pulsan y se mueven en el cielo de lugares nórdicos; con tonos verdes, rojizos y blancos. Carrington, leyendo los avisos, puso de manifiesto que posiblemente existía una relación entre las llamaradas solares y las auroras. El magnetismo tenía algo que ver, como reflejaban los efectos en las brújulas. Cuanto mayor era el evento en el Sol, más potentes podían ser las auroras y visibles desde más al sur. Carrington contribuyó al concepto de “tiempo espacial” y “tormentas magnéticas” que se originaban en el Sol y po- dían llegar a afectar a la Tierra horas después. De hecho, se pasó el resto de su vida buscando evidencias que apoyasen su hipótesis.
-
-&lt;/div&gt;
-&lt;div&gt;
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-
-Ciertamente, antes de Carrington hubo otras llamaradas u otras tormentas magnéticas, esporádicamente registradas como eventos inexplicables. Según avanza nuestra capacidad para registrar y entender estos eventos, sabemos de otros casos. De hecho, puesto que los, cada vez más comunes, aparatos eléctricos son vulnerables, cada vez son más los efectos causados por estas tormentas. Por ejemplo, en 1989 una tormenta solar colapsó buena parte del sistema eléctrico de seis millones de personas, a la vez que las auroras eran visibles en latitudes incluso más al sur que España.
-
-&lt;/div&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;Probablemente, la llamarada de Carrington es la mayor jamás registrada, aunque sea en lápiz y papel. Se estima que tal magnitud de llamarada solo pasa una vez cada quinientos años. En el año 2003, no obstante, hubo otra que, aunque menor, sí entra en la clase de eventos improbablemente grandes. La gran diferencia es que entonces teníamos una plétora de instrumentos, satélites y comunicaciones para guardar cada vez más detalles con los que alimentar y comprobar hipótesis.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;SOHO es el nombre de uno de los satélites que más datos ha conseguido del Sol. Fue lanzado por la NASA en 1995 y colocado frente a la Tierra en dirección al Sol. Sin protección posible frente a las inclemencias espaciales, ha mantenido su diligente canal de datos, enviando valiosa información. A veces le arrecia de lleno una de estas nubes magnéticas, lo que le deja ciego durante unas horas antes de volver a la normalidad. Ese fue el caso de las llamaradas de octubre del 2003.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;La superficie del Sol gira. Desde la Tierra podemos ver sus manchas aparecer por el este y desaparecer por el oeste. A principios de octubre del 2003, las sensibles cámaras del SOHO detectaban inmensas olas, tsunamis solares, que llegaban desde detrás del borde visible del Sol. Algo estaba a punto de aparecer. Algo que ya estaba produciendo explosiones tan grandes que creaban esos tsunamis solares que se propagaban hacia la cara visible a velocidades absurdas. El 18 de octubre ya se vio en el borde una mancha pequeña que rápidamente creció a más de siete veces el tamaño de la Tierra. Bastante más grande de lo común. Al igual que Carrington, SOHO vio en directo la explosión de una llamarada el 19 de octubre. La diferencia es que esta vez todos los datos quedaban registrados en detalle. La explosión de brillo fue tan grande que inmediatamente bloqueó comunicaciones por radio en la Tierra durante una hora. Lo que preocupaba a algunos científicos es que esa mancha había crecido después de ver los tsunamis solares, por lo que quizás otra mancha, aún más grande, estaba por aparecer.&lt;/p&gt;
-
-[caption id=&quot;attachment_2433&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/04698.jpeg&quot;&gt;&lt;img class=&quot;size-full wp-image-2433&quot; title=&quot;04698&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/04698.jpeg&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;277&quot; /&gt;&lt;/a&gt; Las dos inmensas manchas solares en octubre del 2003. [Imagen: NSO/AURA/NSF/Bill Livingston].[/caption]
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;div&gt;
-
-Las sospechas se confirmaron el 21 de octubre. Algo, aún detrás del borde visible del Sol, acababa de lanzar una inmensa nube magnética. SOHO pudo grabar cómo se propagaba hacia el espacio. Gracias a esos datos, y con la ayuda de la magnetohidrodinámica, se podía predecir que la mancha sería visible a partir del 26 de octubre. Y sería aún más grande que la primera. Mientras tanto, la primera mancha seguía creciendo. Según se acerca al centro, la línea de tiro de sus probables eyecciones de material apunta cada vez más a la Tierra. Esto fue lo que pasó el 22 de octubre. Hubo otra llamarada y una nube magnética más grande que un planeta salió disparada al espacio, y probablemente chocase con la Tierra. Nuestro planeta tiene un escudo magnético que la protege, pero si estas nubes son muy intensas puede afectarnos. Gracias a SOHO se pudo calcular la hora de llegada de esa nube. Aun cuando posiblemente nos impactara muy de lado, se temía que sería bastante intensa, por lo que la NASA mandó a los astronautas de la Estación Espacial Internacional a resguardarse en la parte relativamente más protegida de la nave. Las compañías aéreas desviaron sus vuelos lo más lejos posible de los polos y con menor altura, para evitar las zonas más vulnerables y estar lo más dentro posible del escudo terrestre. Minutos antes de llegar a la Tierra, la nube alcanza SOHO. El impacto fue tan grande que cegó las cámaras y puso a prueba los sistemas de protección del satélite. Lo mismo ocurre con todo satélite que orbita la Tierra, aunque a SOHO, al estar más lejos, le llega antes y está más expuesto. De hecho, el impacto, aun lateral, fue tan grande que un satélite japonés no aguantó la descarga y nunca volvió a responder. El resto, incluido SOHO, pudo volver a funcionar al cabo de unas horas.
-
-&lt;/div&gt;
-&lt;div&gt;[caption id=&quot;attachment_2434&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/295700853_5d2dfd5afd_o.jpeg&quot;&gt;&lt;img class=&quot;size-full wp-image-2434&quot; title=&quot;295700853_5d2dfd5afd_o&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/295700853_5d2dfd5afd_o.jpeg&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;176&quot; /&gt;&lt;/a&gt; Mancha solar visible a simple vista al atardecer, 16 de noviembre del 2006. [Imagen: usuario Fdecomite de Flickr].[/caption]Cuando la nube magnética llega finalmente a la Tierra, nuestro propio campo magnético manda la mayoría de las partículas que forman la nube hacia los polos. Si es suficien- temente intensa, estas partículas cargadas intentan bajar hacia la superficie. Es entonces cuando chocan con nuestra atmósfera, produciendo brillos de varios colores. Desde abajo se ven como luces ondulantes y pulsantes en intensidad a medida que las ráfagas de partículas van siendo frenadas por encima de los 80 km de altitud. Es lo que llamamos auroras. Esta es la razón por la que se ven sobre todo cerca de los polos, y, cuando las tormentas son muy fuertes, es posible que ocurran en zonas más cercanas al ecuador.La situación en octubre del 2003 se ponía cada vez más preocupante. La primera mancha crecía y era más de diez veces el tamaño de la Tierra, y se estaba situando en línea de tiro directa con la Tierra, mientras su actividad no cesaba. La segunda mancha, en camino, ya era perfectamente visible. Un monstruo aún más grande, activo y complejo que el primero. Tal y como cuenta Stuart Clark en el libro Los reyes del Sol, una de las fuentes de este artículo: “Ver una mancha de tales dimensiones es fascinante, ver dos es preocupante”.El 28 de octubre, con la primera mancha en línea de tiro directa a la Tierra, se produce lo que más se temía: otra inmensa llamarada, cuya energía era mayor de 50.000 millones de bombas atómicas. Su brillo bloqueó inmediatamente toda comunicación del sistema marítimo de comunicaciones de emergencia, dejó sin contacto por radio a las expediciones en el Everest e incluso las radios de un grupo de bomberos que apagaban entonces un incendio en California. SOHO, aunque deslumbrado, pudo ver cómo una inmensa nube salía directamente hacia la cámara, hacia nosotros. A la alta velocidad con la que salió disparada, solo había unas horas para preparase. Se decidió que sería demasiado para SOHO, y mandaron el comando a su ordenador para que entrase en modo de emergencia anticipado hasta después de que la tormenta azotase todos sus sistemas. De nuevo, los aviones tuvieron que cambiar sus rutas, mucho más bajas y lo más al sur posible. El coste extra por volar a menos altitud y rutas más largas superó el millón de euros. La nube magnética creó corrientes estáticas en la superficie que se propagan fácilmente por cualquier conductor. Más de 50.000 suecos quedaron sin electricidad por varias horas y varias centrales de energía nuclear en Estados Unidos decidieron activar protocolos de emergencia preventivos por temor a estas corrientes.&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;div&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;El resto de octubre y parte de noviembre siguió sufriendo las batidas de estas manchas, mientras en la Tierra miríada de problemas continuaban. Los GPS daban datos erróneos, las televisiones por satélite funcionaban intermitentemente. Mientras, cada vez más gente consultaba las imágenes de SOHO y otros satélites para ver cómo seguían aguantando y cuándo pasaría la tormenta.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;Lentamente, ambas manchas seguían su explosiva marcha por la superficie del Sol, hacia el borde oeste. En un último acto de protagonismo, la segunda mancha, ya en el borde visible desde Tierra, emitió una llamarada tan grande que cegó las cámaras, haciendo imposible medir su intensidad exacta. Lo que sí es seguro es que era más del doble de potente que la que impactó la Tierra un par de semanas antes. Mientras los científicos seguían la tra- yectoria de la nube expulsada lejos de nosotros, era intimidante pensar en las desastrosas consecuencias de que esta hubiera tenido de pasar tan solo unos días antes. Quizás una llamarada parecida es la que Carrington observó. Improbablemente intensa, pero no imposible.&lt;/p&gt;
-
-
-[caption id=&quot;attachment_2435&quot; align=&quot;aligncenter&quot; width=&quot;640&quot;]&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot;&gt;&lt;img class=&quot;size-full wp-image-2435&quot; title=&quot;3116651251_11dc28776b_o&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/3116651251_11dc28776b_o.gif&quot; alt=&quot;&quot; width=&quot;640&quot; height=&quot;587&quot; /&gt;&lt;/a&gt; Mancha solar vista desde el observatorio del Teide, 26 de abril del 2006, parte de mi tesis doctoral. /about-2/work/phd/.[/caption]
-&lt;p style=&quot;text-align: justify;&quot;&gt;Las auroras son fascinantes eventos de inmensa belleza. Las manchas solares, visibles muy raramente a simple vista al atardecer, son también hechos naturales que han sido enigmáticos durante miles de años. Hoy en día, la ciencia, física solar y el estudio del tiempo espacial, nos da muchas respuestas a estos y otros eventos. Cuando ahora vemos una aurora, vemos la misma belleza, pero entendemos su naturaleza, lo que nos lleva a una perspectiva muchísimo más rica. Ver lo que ocurre nos da la misma fascinación visual que nos ha acompañado en la historia, pero permite, además, entender lo que ocurre, lo que nos aporta una satisfacción mental indescriptible. La ciencia nos abre un nuevo tipo de ojos, nos da un sentido solo accesible al privilegio de la ciencia moderna. Es más, podemos acceder a esa admiración por el universo sin necesariamente ver una aurora o una mancha solar. Yo he visto manchas en directo con telescopios, pero nunca he visto una aurora. Nuestra mente es capaz de acceder a ese sentimiento de maravilla solo leyendo y pensando sobre ello, como espero haber conseguido con este artículo.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;div&gt;
-
-El material de este artículo lo he extraído de:
-- Libro “The Sun Kings” de Stuart Clark.
-- Libro “Breve historia de casi todo” de Bill Bryson.
-- Wikipedia.es páginas: “Sol”, “Tiempo solar”, “Carrington”, “Halloween event”. - Amazings.es
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
 </content>
 	</entry>
