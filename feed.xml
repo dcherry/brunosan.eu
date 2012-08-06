@@ -4,7 +4,7 @@
 	<title type="text" xml:lang="en">Brunosan</title>
 	<link type="application/atom+xml" href="/feed/" rel="self"/>
  	<link type="text" href="/" rel="alternate"/>
-	<updated>2012-07-29T18:42:18-04:00</updated>
+	<updated>2012-08-06T10:03:32-04:00</updated>
 	<id>/</id>
 	<author>
     <name> Bruno Sánchez-Andrade Nuño </name>
@@ -25,6 +25,95 @@ so most inbound links should still work.&lt;/p&gt;
 &lt;p&gt;My old site still lives at &lt;a href=&quot;http://nasonurb.wordpress.com&quot;&gt;Wordpress&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Feel free to send me your comments to &lt;a href=&quot;mailto:brunosan@gmail.com?subject=Feedback%20for%20your%20newsite&quot;&gt;brunosan@gmail.com&lt;/a&gt;. Thanks!&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>[Idea] Cloud Battery App</title>
+    <link href="http://brunosan.eu//2012/08/05/idea-cloud-battery-app/"/>
+		<updated>2012-08-05T00:00:00-04:00</updated>
+		<id>//2012/08/05/idea-cloud-battery-app</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;/media/Battery-hub.png &quot;&gt; &lt;img width=&quot;100%&quot; src=&quot;/media/Battery-hub.png &quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an idea for an app that keeps track of the battery levels across
+all your devices.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The need&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You probably have:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A smart phone (e.g. iPhone, Android or BlackBerry). Battery lasts between one
+or two days typically.&lt;/li&gt;
+&lt;li&gt;A tablet (e.g. iPad, Nexus 7). Battery last a few days, less than a
+week.&lt;/li&gt;
+&lt;li&gt;A laptop. Battery lasts hours, but most of the time it is used with a
+cord.&lt;/li&gt;
+&lt;li&gt;A Bluetooth mouse or track pad in the computer.&lt;/li&gt;
+&lt;li&gt;A Bluetooth wireless headset. E.g. for running or just calling with it.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Perhaps also a second phone, a Kindle, a work laptop, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;How can you keep track of which device needs recharge when? How can you
+avoid taking your phone for commuting to find out is nearly dead?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+
+&lt;p&gt;Wouldn´t it be nice if you had an app that lists the battery levels of
+all your online devices?&lt;/p&gt;
+
+&lt;p&gt;It would also help you keep track of battery health, quick check before a
+long trip or just getting an alert at night to re-charge so you can use
+it for your commute next day.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The implementation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the app needs to have a version for each OS (Win, OSX, iOS, Android).
+May be you can get around it putting it on a website and use some
+Javascript magic
+to request the battery life. &lt;a href=&quot;http://www.smartjava.org/content/html5-access-battery-status-through-javascript&quot;&gt;This already exists, btw&lt;/a&gt;. The problem is that then you need to use that page as
+home&amp;hellip;
+Also the feature to request the battery level to Bluetooth devices might
+not be possible depending on the model.&lt;/p&gt;
+
+&lt;p&gt;Basically the app would request the battery level every so often. To
+save battery, you can make it to do it at most one quarter of the
+minimum recorded lifetime of each device´s battery.&lt;/p&gt;
+
+&lt;p&gt;Once recorded the app sends the timestamp and battery level to the
+server, or schedules to send it once you get online.&lt;/p&gt;
+
+&lt;p&gt;The app queries the server every so often to retrieve the lists of
+devices and their battery levels.&lt;/p&gt;
+
+&lt;p&gt;You can make the extra mile and calculate the remaining battery life
+both in idle and maximum use scenarios (you can get those statistical estimates
+after a few charge loads or with a few users with the same device and
+battery health status).&lt;/p&gt;
+
+&lt;p&gt;You can also tie it to your calendar and alert the user before a long
+trip.&lt;/p&gt;
+
+&lt;p&gt;It would also be very interesting to see aggregated data on battery
+performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Monetize&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can monetize selling the app. I would pay for it.&lt;/p&gt;
+
+&lt;p&gt;You can also show ads, or even trigger ads for new batteries or servicing options once the
+battery health for a particular device gets too low.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You don´t want a low battery when you get Aces, do you?&lt;/em&gt;
+&lt;a href=&quot;http://www.flickr.com/photos/cjsorg/2769855332/&quot; title=&quot;Aces
+and Low Battery by CJ Sorg, on Flickr&quot;&gt;&lt;img
+src=&quot;http://farm4.staticflickr.com/3143/2769855332_f774ef8530.jpg&quot;
+width=&quot;480&quot; height=&quot;320&quot; alt=&quot;Aces and Low Battery&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
@@ -855,45 +944,6 @@ Claudio Szlafsztein, PhD (&lt;a href=&quot;http://gain.org/team/claudio-szlafszt
 &lt;p&gt;[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;179&amp;rdquo;]&lt;a title=&quot;Credential by brunosan, on Flickr&quot; href=&quot;http://www.flickr.com/photos/nasonurb/7428190608/&quot;&gt;&lt;img src=&quot;http://farm6.staticflickr.com/5455/7428190608_2e2f3d5990.jpg&quot; alt=&quot;Credential&quot; width=&quot;179&quot; height=&quot;300&quot; /&gt;&lt;/a&gt; Credential to enter the UN conference[/caption]&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;/p&gt;
-
-</content>
-	</entry>
-	
-	<entry>
-		<title>Rio+20 stuck on traffic for a year, every day</title>
-    <link href="http://brunosan.eu//2012/06/24/logistics-and-rio20/"/>
-		<updated>2012-06-24T00:00:00-04:00</updated>
-		<id>//2012/06/24/logistics-and-rio20</id>
-		<content type="html">&lt;p&gt;&lt;img src=&quot;http://farm5.staticflickr.com/4090/4993990030_b10fd201bb.jpg&quot; alt=&quot;rio traffic&quot; width=&quot;500&quot; height=&quot;375&quot; /&gt;&lt;/p&gt;
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;Rio+20 [&lt;a href=&quot;/2012/06/26/rio20-where-the-side-events-are-the-main-event/&quot;&gt;my post about the conference&lt;/a&gt; here, this is a rant on the traffic] had 45.381 participants from 188 countries, which included 100 heads of state and their staff [&lt;a href=&quot;http://blogs.un.org/blog/2012/06/22/rio20-wrap-up-vital-stats/&quot;&gt;source&lt;/a&gt;]. Now, &lt;a href=&quot;http://en.wikipedia.org/wiki/Rio_de_Janeiro&quot;&gt;the city of Rio de Janerio&lt;/a&gt; has 6 million people, and 2 million cars, in 5000 km². Furthermore, there seems to be a &lt;a href=&quot;http://brazilianbubble.com/opinion-brazils-strained-auto-loan-market&quot;&gt;automobile loan bubble&lt;/a&gt;, similar to the house loan bubble in the USA, that has been injecting cars into the barely increasing roads of the city. You can already see how logistics in Rio+20 are, at least, very tricky.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;!--more--&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;a title=&quot;The green wears out by brunosan, on Flickr&quot; href=&quot;http://www.flickr.com/photos/nasonurb/7428226606/&quot;&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7255/7428226606_beea86bb86.jpg&quot; alt=&quot;&quot; width=&quot;299&quot; height=&quot;500&quot; /&gt;&lt;/a&gt;
-The green wears out at the UN conference&lt;/p&gt;
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;The conference provided free shuttle buses between the hotels and the conference venue, which is a 30 minutes ride with no traffic. Taking the &lt;a href=&quot;http://www.uncsd2012.org/transportation.html&quot;&gt;official schedule&lt;/a&gt; of routes and hotels, we can make a rough average per hotel of around 60 minutes. Consider that as a VERY optimistic threshold, since there is &lt;strong&gt;lot´s&lt;/strong&gt; of traffic. One day it took me 60 minutes, the next 120.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;Let´s play with the numbers. Let´s say that only 50% on average indeed uses the buses on a each particular day. That means roughly 30.000 people-hours of development professionals, or 3 years of development time wasted on moving people each way, and if you only consider the extra time due to traffic, &lt;strong&gt;a year of development time wasted waiting in traffic&lt;/strong&gt;, every day of the conference.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;On the first day I got an interesting offer from &lt;a href=&quot;http://www.petrobras.com.br/en/&quot;&gt;Petrobras&lt;/a&gt;. They were providing free rides to get to the conference on their company cars, directly to the venue, without stopping unlike the conference buses. They only wanted my name, email, and to show me a video on their biofuels initiative. Probably &lt;a href=&quot;http://www.petrobras.com.br/en/energy-and-technology/sources-of-energy/biofuels/&quot;&gt;this one&lt;/a&gt;. At that point, with the cumulative desperation, and the curiosity, I accepted. The ride, I must say, was much quicker (small car, no stops). Unfortunately the driver &lt;em&gt;forgot&lt;/em&gt; to show me the video, even when I asked him.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;On Wednesday I planned to get early to attend the session on &lt;a href=&quot;http://www.uncsd2012.org/index.php?page=view&amp;amp;type=1000&amp;amp;nr=476&amp;amp;menu=126&quot;&gt;metrics to measure progress&lt;/a&gt; at 9 am. I left my &lt;a href=&quot;http://www.airbnb.com/&quot;&gt;Airbnb&lt;/a&gt; apartment at 7am towards the conference bus stop. When the first bus came at 7:40am there were worth 2 full buses of people waiting. Now picture that. Participants of a &lt;em&gt;United&lt;/em&gt; Nations conference to bring together world experts on how to grow together, on formal attire, dashing towards the bus door, elbowing each other, on their perfectly ironed suits. We all had reasons to be worried and wanted to get early to the conference venue, but when the need strikes, it makes us egoistic and unpolite, even on a UN conference. I had estimated were the bus would stop, and I was right, so I was basically pushed into the bus. It was that bad.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;The next day I went at the same time. Interestingly, people arranged themselves into a perfect line and waited for the bus. It also turned out that my president was hosted on that hotel, so I stepped out the line when I saw his car with the flags to make some pictures... and may be also get a ride (carpooling? after all I was the only spaniard around and I had conference credentials). When I came back to the line, the very nice couple before me (&lt;a href=&quot;https://www.facebook.com/Permacyclists&quot;&gt;Anna and Dave&lt;/a&gt;) let me go back in, and I had the pleasure to get to know them and their wonderful story. Somehow, apparent behaviour snowballs. If a few are considerate and polite to make a line in the beginning, the rest will align. Early model behavior can make a difference. Every action is a vote for the world we want to live in, specially if you arrive early.&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://nasonurb.files.wordpress.com/2012/06/photo.jpeg&quot;&gt;&lt;img class=&quot;size-full wp-image-2448 aligncenter&quot; title=&quot;photo&quot; src=&quot;http://nasonurb.files.wordpress.com/2012/06/photo.jpeg&quot; alt=&quot;&quot; width=&quot;403&quot; height=&quot;403&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;p style=&quot;text-align: justify;&quot;&gt;I can only fear what will happen on the Soccer &lt;a href=&quot;http://en.wikipedia.org/wiki/2014_FIFA_World_Cup&quot;&gt;World Cup&lt;/a&gt; in 2 years. After all, the Rio+20 conference is no more than a few days of up to 50.000 people than come to work. World Cup people will be there to enjoy the games, and I am afraid will not be happy sitting 2 hours on a otherwise 30 minutes bus ride.&lt;/p&gt;
 
 </content>
 	</entry>

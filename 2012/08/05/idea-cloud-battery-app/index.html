@@ -10,7 +10,7 @@
   <link rel="canonical" href="http://brunosan.eu" />
   -->
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <title>Bertrand Russell’s 10 Commandments</title> <meta name="author" content="Bruno Sánchez-Andrade Nuño - brunosan" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <title>[Idea] Cloud Battery App</title> <meta name="author" content="Bruno Sánchez-Andrade Nuño - brunosan" />
 
 	<!-- Google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Oxygen|Arvo' rel='stylesheet' type='text/css'>
@@ -100,50 +100,107 @@
 		
 		
 <div id="post-" class="post">
-  <h2>Bertrand Russell’s 10 Commandments</h2>
+  <h2>[Idea] Cloud Battery App</h2>
   <div id="post_content">
-    <div><span style="font-size:medium;"><span style="line-height:24px;"><a href="http://nasonurb.files.wordpress.com/2012/05/mysteries-2108100_1700570c.jpeg"><img class="size-full wp-image-2391 aligncenter" title="mysteries-2108100_1700570c" src="http://nasonurb.files.wordpress.com/2012/05/mysteries-2108100_1700570c.jpeg" alt="" width="460" height="288" /></a></span></span></div>
+    <p><a href="/media/Battery-hub.png "> <img width="100%" src="/media/Battery-hub.png "></a></p>
+
+<p>This is an idea for an app that keeps track of the battery levels across
+all your devices.</p>
+
+<p><strong>The need</strong></p>
+
+<p>You probably have:</p>
+
+<ul>
+<li>A smart phone (e.g. iPhone, Android or BlackBerry). Battery lasts between one
+or two days typically.</li>
+<li>A tablet (e.g. iPad, Nexus 7). Battery last a few days, less than a
+week.</li>
+<li>A laptop. Battery lasts hours, but most of the time it is used with a
+cord.</li>
+<li>A Bluetooth mouse or track pad in the computer.</li>
+<li>A Bluetooth wireless headset. E.g. for running or just calling with it.</li>
+</ul>
 
 
-<ol>
-    <li>Do not feel absolutely certain of anything.</li>
-    <li>Do not think it worth while to proceed by concealing evidence, for the evidence is sure to come to light.</li>
-    <li>Never try to discourage thinking for you are sure to succeed.</li>
-    <li>When you meet with opposition, even if it should be from your husband or your children, endeavour to overcome it by argument and not by authority, for a victory dependent upon authority is unreal and illusory.</li>
-    <li>Have no respect for the authority of others, for there are always contrary authorities to be found.</li>
-    <li>Do not use power to suppress opinions you think pernicious, for if you do the opinions will suppress you.</li>
-    <li>Do not fear to be eccentric in opinion, for every opinion now accepted was once eccentric.</li>
-    <li>Find more pleasure in intelligent dissent that in passive agreement, for, if you value intelligence as you should, the former implies a deeper agreement than the latter.</li>
-    <li>Be scrupulously truthful, even if the truth is inconvenient, for it is more inconvenient when you try to conceal it.</li>
-    <li>Do not feel envious of the happiness of those who live in a fool’s paradise, for only a fool will think that it is happiness.</li>
-</ol>
+<p>Perhaps also a second phone, a Kindle, a work laptop, &hellip;</p>
+
+<p>How can you keep track of which device needs recharge when? How can you
+avoid taking your phone for commuting to find out is nearly dead?</p>
+
+<p><strong>The Solution</strong></p>
+
+<!--more-->
 
 
-<div style="text-align:right;"><span style="font-size:medium;"><span style="line-height:24px;"><a href="http://en.wikipedia.org/wiki/Bertrand_Russell">Bertrand Russell</a>’s <a href="https://www.google.com/search?sourceid=chrome&amp;ie=UTF-8&amp;q=Bertrand+Russell%E2%80%99s+10+Commandments">10 Commandments</a>
-</span></span></div>
+<p>Wouldn´t it be nice if you had an app that lists the battery levels of
+all your online devices?</p>
 
+<p>It would also help you keep track of battery health, quick check before a
+long trip or just getting an alert at night to re-charge so you can use
+it for your commute next day.</p>
 
-<p style="text-align:right;"><span style="font-size:medium;"><span style="line-height:24px;">
-</span></span></p>
+<p><strong>The implementation</strong></p>
 
+<p>Unfortunately, the app needs to have a version for each OS (Win, OSX, iOS, Android).
+May be you can get around it putting it on a website and use some
+Javascript magic
+to request the battery life. <a href="http://www.smartjava.org/content/html5-access-battery-status-through-javascript">This already exists, btw</a>. The problem is that then you need to use that page as
+home&hellip;
+Also the feature to request the battery level to Bluetooth devices might
+not be possible depending on the model.</p>
+
+<p>Basically the app would request the battery level every so often. To
+save battery, you can make it to do it at most one quarter of the
+minimum recorded lifetime of each device´s battery.</p>
+
+<p>Once recorded the app sends the timestamp and battery level to the
+server, or schedules to send it once you get online.</p>
+
+<p>The app queries the server every so often to retrieve the lists of
+devices and their battery levels.</p>
+
+<p>You can make the extra mile and calculate the remaining battery life
+both in idle and maximum use scenarios (you can get those statistical estimates
+after a few charge loads or with a few users with the same device and
+battery health status).</p>
+
+<p>You can also tie it to your calendar and alert the user before a long
+trip.</p>
+
+<p>It would also be very interesting to see aggregated data on battery
+performance.</p>
+
+<p><strong>Monetize</strong></p>
+
+<p>You can monetize selling the app. I would pay for it.</p>
+
+<p>You can also show ads, or even trigger ads for new batteries or servicing options once the
+battery health for a particular device gets too low.</p>
+
+<p><em>You don´t want a low battery when you get Aces, do you?</em>
+<a href="http://www.flickr.com/photos/cjsorg/2769855332/" title="Aces
+and Low Battery by CJ Sorg, on Flickr"><img
+src="http://farm4.staticflickr.com/3143/2769855332_f774ef8530.jpg"
+width="480" height="320" alt="Aces and Low Battery"></a></p>
 
   </div>
 
 
 
-<p><time> 6 May 2012
+<p><time> 5 August 2012
 •
-<a id="pull-request-btn" class="btn" href="https://github.com/brunosan/brunosan.eu/edit/master/_posts/2012-05-06-bertrand-russells-10-commandments.md">
+<a id="pull-request-btn" class="btn" href="https://github.com/brunosan/brunosan.eu/edit/master/_posts/2012-08-05-idea-cloud-battery-app.md">
 	            Send edit request
 	        </a><a href="/2012/07/01/jekyll-pull-requests/">What is this?</a>
 	</time>
 	
         <div class='button share-links'>
           <ul>
-            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://brunosan.eu/2012/05/06/bertrand-russells-10-commandments/" data-via="brunosan">Tweet</a>
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://brunosan.eu/2012/08/05/idea-cloud-battery-app/" data-via="brunosan">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            <li><div class="fb-like" data-width="0" data-href="http://brunosan.eu/2012/05/06/bertrand-russells-10-commandments/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
-            <li><g:plusone annotation="none" size="medium" href="http://brunosan.eu/2012/05/06/bertrand-russells-10-commandments/"></g:plusone>
+            <li><div class="fb-like" data-width="0" data-href="http://brunosan.eu/2012/08/05/idea-cloud-battery-app/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+            <li><g:plusone annotation="none" size="medium" href="http://brunosan.eu/2012/08/05/idea-cloud-battery-app/"></g:plusone>
           </ul>
           </div>
  </p>
@@ -152,7 +209,7 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'brunosan'; // required: replace example with your forum shortname
-    //var disqus_url = 'http://brunosan.eu/2012/05/06/bertrand-russells-10-commandments/';
+    //var disqus_url = 'http://brunosan.eu/2012/08/05/idea-cloud-battery-app/';
     //var disqus_developer = 1; // developer mode is on
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -179,8 +236,8 @@
   
     <div class="related-post">
       <div class="title">
-        <a href="/2012/05/03/idea-synthetic-multi-beam-microphone//" target="_top">
-          [Idea] Synthetic Multi-beam Microphone
+        <a href="/2010/11/27/idea-guess-action-button//" target="_top">
+          Idea: Predictive mOS
         </a>
       </div>
     </div>
@@ -195,16 +252,16 @@
   
     <div class="related-post">
       <div class="title">
-        <a href="/2010/04/15/creativity-in-science//" target="_top">
-          Creativity in Science
+        <a href="/2012/07/23/tapping-on-the-beating-heart-of-kim-kardashian//" target="_top">
+          Tapping on 'The Beating Heart of Kim Kardashian'
         </a>
       </div>
     </div>
   
     <div class="related-post">
       <div class="title">
-        <a href="/2011/04/18/eli-the-physio//" target="_top">
-          Eli, the physio
+        <a href="/2010/12/17/a-week-with-the-macbook-air//" target="_top">
+          A week with the MacBook Air
         </a>
       </div>
     </div>
